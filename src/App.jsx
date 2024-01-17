@@ -1,12 +1,16 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import Navbar from "./components/Navbar";
+import { Dashboard, Login, SignUp } from "./pages";
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <button className="btn btn-primary m-3">Button</button>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/SignUp" element={<SignUp />} />
+        <Route path="/Login" element={<Login />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
