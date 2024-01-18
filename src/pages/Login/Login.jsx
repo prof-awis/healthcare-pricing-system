@@ -28,7 +28,7 @@ const Login = () => {
                           <input
                             type="email"
                             id="floatingInput"
-                            className="form-control"
+                            className="form-control shadow-none"
                             placeholder="Your Email"
                           />
                           <label
@@ -50,7 +50,7 @@ const Login = () => {
                           <input
                             type="password"
                             id="floatingInput"
-                            className="form-control"
+                            className="form-control shadow-none"
                             placeholder="Your Password"
                           />
                           <label

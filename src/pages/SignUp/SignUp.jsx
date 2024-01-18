@@ -33,7 +33,7 @@ const SignUp = () => {
                           <input
                             type="text"
                             id="floatingInput"
-                            className="form-control"
+                            className="form-control shadow-none"
                             placeholder="Your Name"
                           />
                           <label
@@ -55,7 +55,7 @@ const SignUp = () => {
                           <input
                             type="email"
                             id="floatingInput"
-                            className="form-control"
+                            className="form-control shadow-none"
                             placeholder="Your Email"
                           />
                           <label
@@ -77,7 +77,7 @@ const SignUp = () => {
                           <input
                             type="password"
                             id="floatingInput"
-                            className="form-control"
+                            className="form-control shadow-none"
                             placeholder="Your Password"
                           />
                           <label
@@ -99,7 +99,7 @@ const SignUp = () => {
                           <input
                             type="password"
                             id="floatingInput"
-                            className="form-control"
+                            className="form-control shadow-none"
                             placeholder="Repeat Password"
                           />
                           <label
@@ -113,7 +113,7 @@ const SignUp = () => {
 
                       <div className="form-check d-flex justify-content-center mb-5">
                         <input
-                          className="form-check-input me-2"
+                          className="form-check-input me-2 shadow-none"
                           type="checkbox"
                           value=""
                           id="form2Example3c"
