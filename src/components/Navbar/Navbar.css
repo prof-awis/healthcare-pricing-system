@@ -1,0 +1,11 @@
+/* Navbar.css */
+
+body {
+  padding-bottom: 56px; /* Adjust this value based on your navbar height */
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-bottom: 72px; /* Adjust this value based on your navbar height */
+  }
+}

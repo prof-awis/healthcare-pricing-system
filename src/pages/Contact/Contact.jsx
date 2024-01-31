@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 const Contact = () => {
   return (
-    <div className="container-fluid p-5">
+    <div className="container-fluid p-5 " id="contact">
       <div className="row">
         <div className="col-md-8 mx-auto">
           <h2 className="text-center mb-4">Contact Us</h2>
@@ -12,7 +12,7 @@ const Contact = () => {
             We'd love to hear from you! If you have any questions, feedback, or
             inquiries, feel free to reach out to us.
           </p>
-          <div className="card">
+          <div className="card bg-body-secondary ">
             <div className="card-body">
               <div className="row">
                 <div className="col-md-6">
@@ -35,17 +35,32 @@ const Contact = () => {
                   {/* Add a contact form if needed */}
                   <form>
                     <div className="form-group">
-                      <label htmlFor="name">Name</label>
-                      <input type="text" className="form-control" id="name" />
+                      <label htmlFor="name" className="text-info">
+                        Name
+                      </label>
+                      <input
+                        type="text"
+                        className="form-control shadow-none "
+                        id="name"
+                      />
                     </div>
                     <div className="form-group">
-                      <label htmlFor="email">Email</label>
-                      <input type="email" className="form-control" id="email" />
+                      <label htmlFor="email" className="text-info">
+                        Email
+                      </label>
+                      <input
+                        type="email"
+                        className="form-control shadow-none "
+                        id="email"
+                      />
                     </div>
+
                     <div className="form-group">
-                      <label htmlFor="message">Message</label>
+                      <label htmlFor="message" className="text-info">
+                        Message
+                      </label>
                       <textarea
-                        className="form-control"
+                        className="form-control shadow-none "
                         id="message"
                         rows="4"
                       ></textarea>

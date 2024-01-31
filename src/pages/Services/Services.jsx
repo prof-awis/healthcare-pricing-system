@@ -30,7 +30,7 @@ const Services = () => {
   ];
 
   return (
-    <div className="container-fluid mt-5 bg-info ">
+    <div className="container-fluid mt-5 bg-info " id='services'>
       <h2 className="text-center mb-4 pt-5">Our Services</h2>
       <div className="row">
         {servicesData.map((service, index) => (

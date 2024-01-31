@@ -2,10 +2,12 @@ import React from "react";
 import draw1 from "../../assets/images/draw1.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faLock } from "@fortawesome/free-solid-svg-icons";
+import { Navbar } from "../../components";
 
 const Login = () => {
   return (
     <div className="min-vh-100 bg-secondary">
+      <Navbar/>
       <div className="container h-100 p-5">
         <div className="row d-flex justify-content-center align-items-center h-100">
           <div className="col-lg-12 col-xl-11">

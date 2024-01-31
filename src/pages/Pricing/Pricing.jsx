@@ -80,7 +80,7 @@ const Pricing = () => {
   const filteredRegionData = filterData(regionData);
 
   return (
-    <div className="container mt-5">
+    <div className="container mt-5" id="pricing">
       <div className="row">
         <div className="col-md-6">
           <h2 className="mb-4">Region-Specific Procedure Pricing</h2>

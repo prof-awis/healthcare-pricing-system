@@ -1,11 +1,12 @@
 import React from "react";
+import "./Navbar.css"; // Import your custom CSS file
 
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-info px-md-5 sticky-top ">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
-          Navbar
+        <a className="navbar-brand fw-bold " href="#">
+          MediPrice
         </a>
         <button
           className="navbar-toggler"
@@ -21,21 +22,26 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
+              <a className="nav-link active" aria-current="page" href="/">
                 Home
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="#about">
                 About
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="#pricing">
                 Pricing
               </a>
             </li>
-            <li className="nav-item dropdown">
+            <li className="nav-item">
+              <a className="nav-link" href="#services">
+                Services
+              </a>
+            </li>
+            {/* <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle"
                 href="#"
@@ -62,14 +68,14 @@ const Navbar = () => {
                   </a>
                 </li>
               </ul>
-            </li>
+            </li> */}
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="#contact">
                 Contact
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="#blog">
                 Blog
               </a>
             </li>

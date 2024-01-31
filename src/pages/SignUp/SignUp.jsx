@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import draw1 from "../../assets/images/draw1.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -7,10 +7,79 @@ import {
   faLock,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
+import { Navbar } from "../../components";
+import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
+  const navigate = useNavigate();
+
+  const [user, setUser] = useState({
+    name: "",
+    email: "",
+    password: "",
+    repeatPassword: "",
+  });
+
+  const [error, setError] = useState(null);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setUser((prevUser) => ({
+      ...prevUser,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    console.log("====================================");
+    console.log(user);
+    console.log("====================================");
+    // Reset previous errors
+    setError(null);
+
+    // Step 1: Validate name field
+    if (!user.name) {
+      setError("Please enter your name.");
+      return;
+    }
+
+    // Step 2: Validate email field
+    if (!user.email) {
+      setError("Please enter your email.");
+      return;
+    }
+
+    // Step 3: Validate password field
+    if (!user.password) {
+      setError("Please enter a password.");
+      return;
+    }
+
+    // Step 4: Validate repeat password field
+    if (user.password !== user.repeatPassword) {
+      setError("Passwords do not match.");
+      return;
+    }
+
+    try {
+      // TODO: Call your authentication service to register the user with 'user' state
+      // Example: const success = await authService.registerUser(user);
+
+      // If registration is successful, you can redirect the user or perform other actions
+      // Example: if (success) history.push('/dashboard');
+
+      navigate("/");
+      // For now, simulate an error
+      throw new Error("Registration failed: Email already exists.");
+    } catch (error) {
+      setError(error.message);
+    }
+  };
+
   return (
     <div className="min-vh-100 bg-secondary">
+      <Navbar />
       <div className="container h-100 p-5">
         <div className="row d-flex justify-content-center align-items-center h-100">
           <div className="col-lg-12 col-xl-11">
@@ -22,7 +91,7 @@ const SignUp = () => {
                       Sign up
                     </p>
 
-                    <form className="mx-1 mx-md-4">
+                    <form className="mx-1 mx-md-4" onSubmit={handleSubmit}>
                       <div className="d-flex flex-row align-items-center mb-4">
                         <FontAwesomeIcon
                           icon={faUser}
@@ -35,6 +104,9 @@ const SignUp = () => {
                             id="floatingInput"
                             className="form-control shadow-none"
                             placeholder="Your Name"
+                            name="name" // Add the 'name' attribute
+                            value={user.name} // Ensure you're using the state value for 'value'
+                            onChange={handleChange} // Add the 'onChange' event handler
                           />
                           <label
                             className="form-label text-info"
@@ -57,6 +129,9 @@ const SignUp = () => {
                             id="floatingInput"
                             className="form-control shadow-none"
                             placeholder="Your Email"
+                            name="email" // Add the 'name' attribute
+                            value={user.email} // Ensure you're using the state value for 'value'
+                            onChange={handleChange} // Add the 'onChange' event handler
                           />
                           <label
                             className="form-label text-info"
@@ -79,6 +154,9 @@ const SignUp = () => {
                             id="floatingInput"
                             className="form-control shadow-none"
                             placeholder="Your Password"
+                            name="password" // Add the 'name' attribute
+                            value={user.password} // Ensure you're using the state value for 'value'
+                            onChange={handleChange} // Add the 'onChange' event handler
                           />
                           <label
                             className="form-label text-info"
@@ -101,6 +179,9 @@ const SignUp = () => {
                             id="floatingInput"
                             className="form-control shadow-none"
                             placeholder="Repeat Password"
+                            name="repeatPassword" // Add the 'name' attribute
+                            value={user.repeatPassword} // Ensure you're using the state value for 'value'
+                            onChange={handleChange} // Add the 'onChange' event handler
                           />
                           <label
                             className="form-labelb text-info"
@@ -127,9 +208,15 @@ const SignUp = () => {
                         </label>
                       </div>
 
+                      {error && (
+                        <div className="alert alert-danger" role="alert">
+                          {error}
+                        </div>
+                      )}
+
                       <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                         <button
-                          type="button"
+                          type="submit"
                           className="btn btn-primary px-5 py-2 rounded-pill"
                         >
                           Sign Up

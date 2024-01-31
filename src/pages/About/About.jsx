@@ -3,7 +3,7 @@ import robot from "../../assets/images/robot.jpg";
 
 const About = () => {
   return (
-    <div className="container-fluid mt-5 bg-info ">
+    <div className="container-fluid mt-5 bg-info " id="about">
       <div className="row">
         <div className="col-md-4 mx-auto d-flex   align-items-center p-5">
           <img
@@ -13,7 +13,7 @@ const About = () => {
             className="img-fluid rounded shadow-lg "
           />
         </div>
-        <div className="col-md-8 mx-auto px-5 ">
+        <div className="col-md-8 mx-auto px-5 pb-5">
           <h2 className="text-center mb-4 pt-5 pb-4 px-3">About MediPrice</h2>
           <p>
             Welcome to MediPrice, where we are committed to revolutionizing the
