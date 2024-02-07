@@ -8,9 +8,9 @@ import Contact from "../Contact/Contact";
 
 const Dashboard = () => {
   return (
-    <div>
+    <>
       <Navbar />
-      <div className="container-fluid">
+      <div className="container-fluid mt-5">
         <div className="row">
           <div className="col p-5 text-center ">
             <h5 className="font-monospace text-info mb-4">
@@ -53,7 +53,7 @@ const Dashboard = () => {
       <Contact />
       {/* <Blog /> */}
       <Footer />
-    </div>
+    </>
   );
 };
 

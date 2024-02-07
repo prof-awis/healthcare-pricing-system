@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 const Pricing = () => {
   const [regionData, setRegionData] = useState([]);
-  const [selectedProcedure, setSelectedProcedure] = useState('');
-  const [selectedHospital, setSelectedHospital] = useState('');
+  const [selectedProcedure, setSelectedProcedure] = useState("");
+  const [selectedHospital, setSelectedHospital] = useState("");
   const [procedurePrice, setProcedurePrice] = useState(null);
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
 
   // Assume there's a function to fetch region-specific hospital pricing data
   const fetchRegionData = () => {
@@ -14,14 +14,14 @@ const Pricing = () => {
     // For simplicity, using a placeholder array here
     const placeholderData = [
       {
-        region: 'Nairobi',
+        region: "Nairobi",
         hospitals: [
           {
-            name: 'Hospital A',
+            name: "Hospital A",
             procedures: [
-              { procedure: 'MRI Scan', price: 5000 },
-              { procedure: 'X-Ray', price: 1000 },
-              { procedure: 'Blood Test', price: 300 },
+              { procedure: "MRI Scan", price: 5000 },
+              { procedure: "X-Ray", price: 1000 },
+              { procedure: "Blood Test", price: 300 },
               // Add more procedures as needed
             ],
           },
@@ -29,14 +29,14 @@ const Pricing = () => {
         ],
       },
       {
-        region: 'Coast',
+        region: "Coast",
         hospitals: [
           {
-            name: 'Hospital B',
+            name: "Hospital B",
             procedures: [
-              { procedure: 'MRI Scan', price: 5500 },
-              { procedure: 'X-Ray', price: 1200 },
-              { procedure: 'Blood Test', price: 350 },
+              { procedure: "MRI Scan", price: 5500 },
+              { procedure: "X-Ray", price: 1200 },
+              { procedure: "Blood Test", price: 350 },
               // Add more procedures as needed
             ],
           },
@@ -71,7 +71,9 @@ const Pricing = () => {
     return data.filter((region) => {
       return region.hospitals.some((hospital) => {
         return hospital.procedures.some((procedure) => {
-          return procedure.procedure.toLowerCase().includes(searchTerm.toLowerCase());
+          return procedure.procedure
+            .toLowerCase()
+            .includes(searchTerm.toLowerCase());
         });
       });
     });
@@ -80,7 +82,7 @@ const Pricing = () => {
   const filteredRegionData = filterData(regionData);
 
   return (
-    <div className="container mt-5" id="pricing">
+    <div className="container px-5   mt-5" id="pricing">
       <div className="row">
         <div className="col-md-6">
           <h2 className="mb-4">Region-Specific Procedure Pricing</h2>
@@ -105,11 +107,14 @@ const Pricing = () => {
                         <li
                           key={innerIndex}
                           className={`list-group-item ${
-                            selectedProcedure === procedure.procedure && selectedHospital === hospital.name
-                              ? 'active'
-                              : ''
+                            selectedProcedure === procedure.procedure &&
+                            selectedHospital === hospital.name
+                              ? "active"
+                              : ""
                           }`}
-                          onClick={() => handleProcedureSelect(procedure, hospital, region)}
+                          onClick={() =>
+                            handleProcedureSelect(procedure, hospital, region)
+                          }
                         >
                           {procedure.procedure}
                         </li>
@@ -121,10 +126,12 @@ const Pricing = () => {
             </div>
           ))}
         </div>
-        <div className="col-md-6">
+        <div className="col-md-6 bg-body-tertiary rounded px-4 ">
           {selectedProcedure && selectedHospital && (
             <div>
-              <h3 className="mb-4">Price for {selectedProcedure} at {selectedHospital}</h3>
+              <h3 className="mb-4">
+                Price for {selectedProcedure} at {selectedHospital}
+              </h3>
               <p>Region: {selectedHospital}</p>
               <p>Hospital: {selectedHospital}</p>
               <p>Procedure: {selectedProcedure}</p>

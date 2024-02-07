@@ -33,7 +33,7 @@ const Contact = () => {
                     we'll get back to you as soon as possible.
                   </p>
                   {/* Add a contact form if needed */}
-                  <form>
+                  <form className="g-3 ">
                     <div className="form-group">
                       <label htmlFor="name" className="text-info">
                         Name
@@ -65,7 +65,7 @@ const Contact = () => {
                         rows="4"
                       ></textarea>
                     </div>
-                    <button type="submit" className="btn btn-primary">
+                    <button type="submit" className="btn btn-primary my-3 ">
                       Send Message
                     </button>
                   </form>

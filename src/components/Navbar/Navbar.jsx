@@ -3,7 +3,7 @@ import "./Navbar.css"; // Import your custom CSS file
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg bg-info px-md-5 sticky-top ">
+    <nav className="navbar navbar-expand-lg bg-info px-md-5 sticky-top mb-5 ">
       <div className="container-fluid">
         <a className="navbar-brand fw-bold " href="#">
           MediPrice
