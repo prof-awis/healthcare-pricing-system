@@ -1,6 +1,9 @@
-// App.js
 import React from "react";
-import { Route, BrowserRouter as Router } from "react-router-dom";
+import {
+  BrowserRouter,
+  Route,
+  BrowserRouter as Router,
+} from "react-router-dom";
 
 import { BlogList, BlogPost } from "../../components";
 import { Routes } from "react-router-dom/dist";
@@ -25,16 +28,13 @@ const Blog = () => {
 
   return (
     <BrowserRouter>
-      <Router>
-        <Routes>
-          <Route path="/Blog" exact>
-            <BlogList blogPosts={blogPosts} />
-          </Route>
-          <Route path="/Blog/:postId">
-            <BlogPost blogPosts={blogPosts} />
-          </Route>
-        </Routes>
-      </Router>
+      <Routes>
+        <Route path="/Blog" element={<BlogList blogPosts={blogPosts} />} />
+        <Route
+          path="/Blog/:postId"
+          element={<BlogPost blogPosts={blogPosts} />}
+        />
+      </Routes>
     </BrowserRouter>
   );
 };

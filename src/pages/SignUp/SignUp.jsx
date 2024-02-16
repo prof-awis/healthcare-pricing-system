@@ -7,7 +7,7 @@ import {
   faLock,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
-import { Navbar } from "../../components";
+import { Navbar, Footer } from "../../components";
 import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
@@ -74,6 +74,47 @@ const SignUp = () => {
       throw new Error("Registration failed: Email already exists.");
     } catch (error) {
       setError(error.message);
+    }
+  };
+
+  const signupHandler = async () => {
+    try {
+      // Define the sign-up data
+      const userData = {
+        username: "example_username",
+        email: "example@example.com",
+        password: "example_password",
+      };
+
+      // Make a POST request to the sign-up endpoint
+      const response = await fetch("http://localhost:5050/signup", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(userData),
+      });
+
+      // Check if the request was successful (status code 2xx)
+      if (response.ok) {
+        // Parse the response JSON data
+        const data = await response.json();
+        console.log("Sign-up successful:", data);
+
+        // Optionally, you can redirect the user to another page
+        // window.location.href = '/dashboard';
+      } else {
+        // Handle error response (status code 4xx or 5xx)
+        const errorData = await response.json();
+        console.error("Sign-up failed:", errorData);
+        // Display error message to the user
+        // Example: setError('Sign-up failed: ' + errorData.message);
+      }
+    } catch (error) {
+      // Handle network errors or other exceptions
+      console.error("Error:", error.message);
+      // Display error message to the user
+      // Example: setError('An unexpected error occurred');
     }
   };
 
@@ -218,6 +259,7 @@ const SignUp = () => {
                         <button
                           type="submit"
                           className="btn btn-primary px-5 py-2 rounded-pill"
+                          onClick={signupHandler}
                         >
                           Sign Up
                         </button>
@@ -248,6 +290,7 @@ const SignUp = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

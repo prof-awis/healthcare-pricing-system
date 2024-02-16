@@ -1,6 +1,8 @@
 // BlogPost.js
 import React from 'react';
 import { useParams } from 'react-router-dom'; // Import useParams from react-router-dom
+import Navbar from '../Navbar/Navbar';
+import Footer from '../Footer/Footer';
 
 const BlogPost = ({ blogPosts }) => {
   const { postId } = useParams(); // Get the postId from the URL params
@@ -11,6 +13,8 @@ const BlogPost = ({ blogPosts }) => {
   }
 
   return (
+    <>
+    <Navbar/>
     <div className="container mt-5">
       <div className="row">
         <div className="col-md-8 mx-auto">
@@ -20,6 +24,8 @@ const BlogPost = ({ blogPosts }) => {
         </div>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 };
 

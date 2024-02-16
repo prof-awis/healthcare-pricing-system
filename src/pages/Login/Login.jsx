@@ -2,12 +2,52 @@ import React from "react";
 import draw1 from "../../assets/images/draw1.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faLock } from "@fortawesome/free-solid-svg-icons";
-import { Navbar } from "../../components";
+import { Navbar, Footer } from "../../components";
 
 const Login = () => {
+
+  const loginHandler = async () => {
+    try {
+      // Define the login credentials
+      const credentials = {
+        username: "example_username",
+        password: "example_password",
+      };
+
+      // Make a POST request to the login endpoint
+      const response = await fetch("http://localhost:5050/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(credentials),
+      });
+
+      // Check if the request was successful (status code 2xx)
+      if (response.ok) {
+        // Parse the response JSON data
+        const data = await response.json();
+        console.log("Login successful:", data);
+
+        // Optionally, you can redirect the user to another page
+        // window.location.href = '/dashboard';
+      } else {
+        // Handle error response (status code 4xx or 5xx)
+        const errorData = await response.json();
+        console.error("Login failed:", errorData);
+        // Display error message to the user
+        // Example: setError('Invalid username or password');
+      }
+    } catch (error) {
+      // Handle network errors or other exceptions
+      console.error("Error:", error.message);
+      // Display error message to the user
+      // Example: setError('An unexpected error occurred');
+    }
+  };
   return (
     <div className="min-vh-100 bg-secondary">
-      <Navbar/>
+      <Navbar />
       <div className="container h-100 p-5">
         <div className="row d-flex justify-content-center align-items-center h-100">
           <div className="col-lg-12 col-xl-11">
@@ -75,6 +115,7 @@ const Login = () => {
                         <button
                           type="button"
                           className="btn btn-primary px-5 py-2 rounded-pill"
+                          onClick={loginHandler}
                         >
                           Login
                         </button>
@@ -105,6 +146,7 @@ const Login = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

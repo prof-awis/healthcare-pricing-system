@@ -1,8 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import Navbar from '../Navbar/Navbar';
+import Footer from '../Footer/Footer';
 
 const BlogList = ({ blogPosts }) => {
   return (
+    <>
+    <Navbar/>
     <div className="container mt-5">
       <div className="row">
         <div className="col-md-8 mx-auto">
@@ -24,6 +28,8 @@ const BlogList = ({ blogPosts }) => {
         </div>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 };
 
