@@ -1,50 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import draw1 from "../../assets/images/draw1.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faLock } from "@fortawesome/free-solid-svg-icons";
 import { Navbar, Footer } from "../../components";
 
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+
+  const navigate = useNavigate();
 
   const loginHandler = async () => {
     try {
-      // Define the login credentials
-      const credentials = {
-        username: "example_username",
-        password: "example_password",
-      };
-
-      // Make a POST request to the login endpoint
-      const response = await fetch("http://localhost:5050/login", {
+      const response = await fetch("http://localhost:5050/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(credentials),
+        body: JSON.stringify({ email, password }),
       });
 
-      // Check if the request was successful (status code 2xx)
       if (response.ok) {
-        // Parse the response JSON data
         const data = await response.json();
+        // Handle successful login (e.g., store token and redirect)
         console.log("Login successful:", data);
 
-        // Optionally, you can redirect the user to another page
-        // window.location.href = '/dashboard';
+        // Redirect user to the dashboard page
+        navigate("/"); // Redirect to the dashboard route
       } else {
-        // Handle error response (status code 4xx or 5xx)
         const errorData = await response.json();
-        console.error("Login failed:", errorData);
-        // Display error message to the user
-        // Example: setError('Invalid username or password');
+        setError(errorData.message);
       }
     } catch (error) {
-      // Handle network errors or other exceptions
       console.error("Error:", error.message);
-      // Display error message to the user
-      // Example: setError('An unexpected error occurred');
+      setError("An unexpected error occurred");
     }
   };
+
   return (
     <div className="min-vh-100 bg-secondary">
       <Navbar />
@@ -65,18 +59,15 @@ const Login = () => {
                           icon={faEnvelope}
                           className="me-3 fa-fw fa-lg"
                         />
-                        {/* <i className="fas fa-envelope fa-lg me-3 fa-fw"></i> */}
                         <div className="form-floating form-outline flex-fill mb-0">
                           <input
                             type="email"
-                            id="floatingInput"
                             className="form-control shadow-none"
                             placeholder="Your Email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
                           />
-                          <label
-                            className="form-label text-info"
-                            htmlFor="floatingInput"
-                          >
+                          <label className="form-label text-info">
                             Your Email
                           </label>
                         </div>
@@ -87,29 +78,23 @@ const Login = () => {
                           icon={faLock}
                           className="me-3 fa-fw fa-lg"
                         />
-                        {/* <i className="fas fa-lock fa-lg me-3 fa-fw"></i> */}
                         <div className="form-floating form-outline flex-fill mb-0">
                           <input
                             type="password"
-                            id="floatingInput"
                             className="form-control shadow-none"
                             placeholder="Your Password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
                           />
-                          <label
-                            className="form-label text-info"
-                            htmlFor="floatingInput"
-                          >
+                          <label className="form-label text-info">
                             Password
                           </label>
                         </div>
                       </div>
 
-                      <div className="form-check d-flex justify-content-center mb-4">
-                        <label className="form-check-label text-info">
-                          Forgot your password?
-                          {/* <a href="#!">Forgot your password?</a> */}
-                        </label>
-                      </div>
+                      {error && (
+                        <div className="alert alert-danger">{error}</div>
+                      )}
 
                       <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                         <button
@@ -134,11 +119,8 @@ const Login = () => {
                     <img
                       src={draw1}
                       alt="sample Patient"
-                      // srcset=""
                       className="img-fluid"
                     />
-                    {/* <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
-                    className="img-fluid" alt="Sample image"> */}
                   </div>
                 </div>
               </div>

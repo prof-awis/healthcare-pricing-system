@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
 import "./App.css";
-import { About, Blog, Dashboard, Login, SignUp } from "./pages";
+import { About, AdminPanel, Blog, Dashboard, Login, SignUp } from "./pages";
 import { BlogList, BlogPost } from "./components";
 
 function App() {
@@ -34,6 +34,7 @@ function App() {
           path="/Blog/:postId"
           element={<BlogPost blogPosts={blogPosts} />}
         />
+        <Route path="/AdminPanel" element={<AdminPanel/>}/>
       </Routes>
     </BrowserRouter>
   );

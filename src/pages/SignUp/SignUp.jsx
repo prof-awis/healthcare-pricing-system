@@ -30,91 +30,34 @@ const SignUp = () => {
     }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    console.log("====================================");
-    console.log(user);
-    console.log("====================================");
-    // Reset previous errors
-    setError(null);
-
-    // Step 1: Validate name field
-    if (!user.name) {
-      setError("Please enter your name.");
-      return;
-    }
-
-    // Step 2: Validate email field
-    if (!user.email) {
-      setError("Please enter your email.");
-      return;
-    }
-
-    // Step 3: Validate password field
-    if (!user.password) {
-      setError("Please enter a password.");
-      return;
-    }
-
-    // Step 4: Validate repeat password field
-    if (user.password !== user.repeatPassword) {
-      setError("Passwords do not match.");
-      return;
-    }
-
-    try {
-      // TODO: Call your authentication service to register the user with 'user' state
-      // Example: const success = await authService.registerUser(user);
-
-      // If registration is successful, you can redirect the user or perform other actions
-      // Example: if (success) history.push('/dashboard');
-
-      navigate("/");
-      // For now, simulate an error
-      throw new Error("Registration failed: Email already exists.");
-    } catch (error) {
-      setError(error.message);
-    }
-  };
-
   const signupHandler = async () => {
     try {
-      // Define the sign-up data
-      const userData = {
-        username: "example_username",
-        email: "example@example.com",
-        password: "example_password",
-      };
-
-      // Make a POST request to the sign-up endpoint
-      const response = await fetch("http://localhost:5050/signup", {
+      const response = await fetch("http://localhost:5050/auth/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(userData),
+        body: JSON.stringify({
+          username: user.name,
+          email: user.email,
+          password: user.password,
+          repass: user.repeatPassword,
+        }),
       });
 
-      // Check if the request was successful (status code 2xx)
       if (response.ok) {
-        // Parse the response JSON data
         const data = await response.json();
         console.log("Sign-up successful:", data);
-
         // Optionally, you can redirect the user to another page
         // window.location.href = '/dashboard';
       } else {
-        // Handle error response (status code 4xx or 5xx)
         const errorData = await response.json();
         console.error("Sign-up failed:", errorData);
-        // Display error message to the user
-        // Example: setError('Sign-up failed: ' + errorData.message);
+        setError(errorData.message);
       }
     } catch (error) {
-      // Handle network errors or other exceptions
       console.error("Error:", error.message);
-      // Display error message to the user
-      // Example: setError('An unexpected error occurred');
+      setError("An unexpected error occurred");
     }
   };
 
@@ -132,26 +75,25 @@ const SignUp = () => {
                       Sign up
                     </p>
 
-                    <form className="mx-1 mx-md-4" onSubmit={handleSubmit}>
+                    <form className="mx-1 mx-md-4">
                       <div className="d-flex flex-row align-items-center mb-4">
                         <FontAwesomeIcon
                           icon={faUser}
                           className="me-3 fa-fw fa-lg"
                         />
-                        {/* <i className="fas fa-user fa-lg me-3 fa-fw"></i> */}
                         <div className="form-floating form-outline flex-fill mb-0">
                           <input
                             type="text"
                             id="floatingInput"
                             className="form-control shadow-none"
                             placeholder="Your Name"
-                            name="name" // Add the 'name' attribute
-                            value={user.name} // Ensure you're using the state value for 'value'
-                            onChange={handleChange} // Add the 'onChange' event handler
+                            name="name"
+                            value={user.name}
+                            onChange={handleChange}
                           />
                           <label
                             className="form-label text-info"
-                            for="floatingInput"
+                            htmlFor="floatingInput"
                           >
                             Your Name
                           </label>
@@ -163,16 +105,15 @@ const SignUp = () => {
                           icon={faEnvelope}
                           className="me-3 fa-fw fa-lg"
                         />
-                        {/* <i className="fas fa-envelope fa-lg me-3 fa-fw"></i> */}
                         <div className="form-floating form-outline flex-fill mb-0">
                           <input
                             type="email"
                             id="floatingInput"
                             className="form-control shadow-none"
                             placeholder="Your Email"
-                            name="email" // Add the 'name' attribute
-                            value={user.email} // Ensure you're using the state value for 'value'
-                            onChange={handleChange} // Add the 'onChange' event handler
+                            name="email"
+                            value={user.email}
+                            onChange={handleChange}
                           />
                           <label
                             className="form-label text-info"
@@ -188,16 +129,15 @@ const SignUp = () => {
                           icon={faLock}
                           className="me-3 fa-fw fa-lg"
                         />
-                        {/* <i className="fas fa-lock fa-lg me-3 fa-fw"></i> */}
                         <div className="form-floating form-outline flex-fill mb-0">
                           <input
                             type="password"
                             id="floatingInput"
                             className="form-control shadow-none"
                             placeholder="Your Password"
-                            name="password" // Add the 'name' attribute
-                            value={user.password} // Ensure you're using the state value for 'value'
-                            onChange={handleChange} // Add the 'onChange' event handler
+                            name="password"
+                            value={user.password}
+                            onChange={handleChange}
                           />
                           <label
                             className="form-label text-info"
@@ -213,16 +153,15 @@ const SignUp = () => {
                           icon={faKey}
                           className="me-3 fa-fw fa-lg"
                         />
-                        {/* <i className="fas fa-key fa-lg me-3 fa-fw"></i> */}
                         <div className="form-floating form-outline flex-fill mb-0">
                           <input
                             type="password"
                             id="floatingInput"
                             className="form-control shadow-none"
                             placeholder="Repeat Password"
-                            name="repeatPassword" // Add the 'name' attribute
-                            value={user.repeatPassword} // Ensure you're using the state value for 'value'
-                            onChange={handleChange} // Add the 'onChange' event handler
+                            name="repeatPassword"
+                            value={user.repeatPassword}
+                            onChange={handleChange}
                           />
                           <label
                             className="form-labelb text-info"
@@ -233,22 +172,6 @@ const SignUp = () => {
                         </div>
                       </div>
 
-                      <div className="form-check d-flex justify-content-center mb-5">
-                        <input
-                          className="form-check-input me-2 shadow-none"
-                          type="checkbox"
-                          value=""
-                          id="form2Example3c"
-                        />
-                        <label
-                          className="form-check-label"
-                          htmlFor="form2Example3"
-                        >
-                          I agree all statements in{" "}
-                          <a href="#!">Terms of service</a>
-                        </label>
-                      </div>
-
                       {error && (
                         <div className="alert alert-danger" role="alert">
                           {error}
@@ -257,7 +180,7 @@ const SignUp = () => {
 
                       <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                         <button
-                          type="submit"
+                          type="button"
                           className="btn btn-primary px-5 py-2 rounded-pill"
                           onClick={signupHandler}
                         >
@@ -278,11 +201,8 @@ const SignUp = () => {
                     <img
                       src={draw1}
                       alt="sample Patient"
-                      // srcset=""
                       className="img-fluid"
                     />
-                    {/* <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
-                  className="img-fluid" alt="Sample image"> */}
                   </div>
                 </div>
               </div>
