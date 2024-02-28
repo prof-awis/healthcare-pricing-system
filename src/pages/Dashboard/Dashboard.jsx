@@ -41,7 +41,6 @@ const Dashboard = () => {
             <img
               src={doctor}
               alt="ex doctor"
-              srcset=""
               className="img-fluid rounded-4 shadow-lg "
             />
           </div>
