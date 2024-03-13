@@ -6,6 +6,7 @@ import {
   faKey,
   faLock,
   faUser,
+  faUserCog,
 } from "@fortawesome/free-solid-svg-icons";
 import { Navbar, Footer } from "../../components";
 import { useNavigate } from "react-router-dom";
@@ -18,6 +19,7 @@ const SignUp = () => {
     email: "",
     password: "",
     repeatPassword: "",
+    role: "user", // Default role is set to "user"
   });
 
   const [error, setError] = useState(null);
@@ -42,6 +44,7 @@ const SignUp = () => {
           email: user.email,
           password: user.password,
           repass: user.repeatPassword,
+          role: user.role, // Include the selected role in the request body
         }),
       });
 
@@ -169,6 +172,25 @@ const SignUp = () => {
                           >
                             Repeat your password
                           </label>
+                        </div>
+                      </div>
+
+                      <div className="d-flex flex-row align-items-center mb-4">
+                        <FontAwesomeIcon
+                          icon={faUserCog}
+                          className="me-3 fa-fw fa-lg"
+                        />{" "}
+                        <div className="form-floating form-outline flex-fill mb-0">
+                          <label className="me-3 mb-0 text-info ">Role:</label>
+                          <select
+                            name="role"
+                            className="form-select shadow-none mt-3"
+                            value={user.role}
+                            onChange={handleChange}
+                          >
+                            <option value="user">User</option>
+                            <option value="admin">Admin</option>
+                          </select>
                         </div>
                       </div>
 

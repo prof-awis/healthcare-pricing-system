@@ -29,10 +29,10 @@ const Pricing = () => {
   const filterData = () => {
     return hospitalData.filter((hospital) => {
       return (
-        hospital.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        hospital.address.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        hospital.services.some((service) =>
-          service.name.toLowerCase().includes(searchTerm.toLowerCase())
+        hospital?.title?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        hospital?.address?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        hospital?.services?.some((service) =>
+          service?.name?.toLowerCase().includes(searchTerm.toLowerCase())
         )
       );
     });

@@ -2,12 +2,17 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import draw1 from "../../assets/images/draw1.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faLock } from "@fortawesome/free-solid-svg-icons";
+import {
+  faEnvelope,
+  faLock,
+  faUserCog,
+} from "@fortawesome/free-solid-svg-icons";
 import { Navbar, Footer } from "../../components";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [role, setRole] = useState("user"); // Default role is set to "user"
   const [error, setError] = useState("");
 
   const navigate = useNavigate();
@@ -19,16 +24,22 @@ const Login = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ email, password }),
+        body: JSON.stringify({ email, password, role }), // Include the selected role in the request body
       });
 
       if (response.ok) {
         const data = await response.json();
         // Handle successful login (e.g., store token and redirect)
-        console.log("Login successful:", data);
+        console.log("Logsin successful:", data);
+        localStorage.setItem("userData", JSON.stringify(data));
+
+
+      
+        // check user type 
+
 
         // Redirect user to the dashboard page
-        navigate("/"); // Redirect to the dashboard route
+        navigate("/"); // Redirect to the dashboard route  
       } else {
         const errorData = await response.json();
         setError(errorData.message);
@@ -88,6 +99,47 @@ const Login = () => {
                           />
                           <label className="form-label text-info">
                             Password
+                          </label>
+                        </div>
+                      </div>
+
+                      <div className="d-flex flex-row align-items-center mb-4">
+                        <FontAwesomeIcon
+                          icon={faUserCog}
+                          className="me-3 fa-fw fa-lg"
+                        />
+                        <div className="form-check form-check-inline">
+                          <input
+                            className="form-check-input"
+                            type="radio"
+                            name="role"
+                            id="userRole"
+                            value="user"
+                            checked={role === "user"}
+                            onChange={() => setRole("user")}
+                          />
+                          <label
+                            className="form-check-label text-info"
+                            htmlFor="userRole"
+                          >
+                            User
+                          </label>
+                        </div>
+                        <div className="form-check form-check-inline">
+                          <input
+                            className="form-check-input"
+                            type="radio"
+                            name="role"
+                            id="adminRole"
+                            value="admin"
+                            checked={role === "admin"}
+                            onChange={() => setRole("admin")}
+                          />
+                          <label
+                            className="form-check-label text-info"
+                            htmlFor="adminRole"
+                          >
+                            Admin
                           </label>
                         </div>
                       </div>

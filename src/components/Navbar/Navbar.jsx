@@ -1,13 +1,27 @@
-import React from "react";
-import "./Navbar.css"; // Import your custom CSS file
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 
 const Navbar = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
+
+  useEffect(() => {
+    // Check authentication status and role here
+    // Example: Fetch user data from localStorage or context
+    const userData = localStorage.getItem("userData");
+    if (userData) {
+      const { role } = JSON.parse(userData);
+      setIsLoggedIn(true);
+      setIsAdmin(role === "admin");
+    }
+  }, []);
+
   return (
     <nav className="navbar navbar-expand-lg bg-info px-md-5 sticky-top mb-5 ">
       <div className="container-fluid">
-        <a className="navbar-brand fw-bold " href="#">
+        <Link className="navbar-brand fw-bold " to="/">
           MediPrice
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -21,69 +35,60 @@ const Navbar = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav ms-auto">
+            {!isLoggedIn && (
+              <li className="nav-item">
+                <Link className="nav-link active" to="/">
+                  Home
+                </Link>
+              </li>
+            )}
+            {isLoggedIn && !isAdmin && (
+              <li className="nav-item">
+                <Link className="nav-link" to="/">
+                  Home
+                </Link>
+              </li>
+            )}
+            {isLoggedIn && isAdmin && (
+              <li className="nav-item">
+                <Link className="nav-link" to="/Admin">
+                  Admin
+                </Link>
+              </li>
+            )}
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="/">
-                Home
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#about">
+              <Link className="nav-link" to="#about">
                 About
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#pricing">
+              <Link className="nav-link" to="#pricing">
                 Pricing
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#services">
+              <Link className="nav-link" to="#services">
                 Services
-              </a>
+              </Link>
             </li>
-            {/* <li className="nav-item dropdown">
-              <a
-                className="nav-link dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Services
-              </a>
-              <ul className="dropdown-menu">
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Action
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Another action
-                  </a>
-                </li>
-                <li>
-                  <a className="dropdown-item" href="#">
-                    Something else here
-                  </a>
-                </li>
-              </ul>
-            </li> */}
             <li className="nav-item">
-              <a className="nav-link" href="#contact">
+              <Link className="nav-link" to="#contact">
                 Contact
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/blog">
+              <Link className="nav-link" to="/blog">
                 Blog
-              </a>
+              </Link>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/Signup">
-                Sign Up
-              </a>
-            </li>
+            
+            {!isLoggedIn && (
+              <li className="nav-item">
+                <Link className="nav-link" to="/Signup">
+                  Sign Up
+                </Link>
+              </li>
+            )}
           </ul>
         </div>
       </div>
