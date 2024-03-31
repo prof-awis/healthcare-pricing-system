@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Footer, Navbar } from "../../components";
+import { Footer, Map, Navbar } from "../../components";
+import { Modal, Button, Form } from "react-bootstrap";
 
 const AdminPanel = () => {
   const userData = localStorage.getItem("userData");
@@ -24,6 +25,7 @@ const AdminPanel = () => {
   const [procedure, setProcedure] = useState("");
   const [price, setPrice] = useState("");
   const [hospitals, setHospitals] = useState([]);
+  const [services, setServices] = useState([]);
 
   useEffect(() => {
     fetchHospitals();
@@ -122,6 +124,109 @@ const AdminPanel = () => {
     }
   };
 
+  const [showModal, setShowModal] = useState(false);
+  const [currentHospital, setCurrentHospital] = useState({
+    title: "",
+    link: "",
+    address: "",
+    rating: "",
+    reviews: "",
+    price: "",
+    category: "",
+    opening_hours: "",
+    phone: "",
+    services: [],
+  });
+
+  const handleEdit = (hospital) => {
+    setCurrentHospital(hospital);
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+
+  const handleInputChange = (event) => {
+    setCurrentHospital({
+      ...currentHospital,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  const handleSaveChanges = async () => {
+    try {
+      const response = await axios.put(
+        `http://localhost:5050/hospitals/${currentHospital._id}`,
+        {
+          headers: {
+            "Content-Type": "application/json", // Example header
+            Authorization: "Bearer " + accessToken,
+            // Add more headers as needed
+          },
+          // currentHospital
+        }
+      );
+      // Update the hospitals list
+      // ...
+      setShowModal(false);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  // Hnadling Services
+  const handleServiceChange = (index, event) => {
+    const newServices = [...currentHospital.services];
+    newServices[index][event.target.name] = event.target.value;
+    setCurrentHospital({
+      ...currentHospital,
+      services: newServices,
+    });
+  };
+
+  const handleAddService = () => {
+    setCurrentHospital({
+      ...currentHospital,
+      services: [...currentHospital.services, { name: "", price: "" }],
+    });
+  };
+
+  const handleRemoveService = (index) => {
+    const newServices = [...currentHospital.services];
+    newServices.splice(index, 1);
+    setCurrentHospital({
+      ...currentHospital,
+      services: newServices,
+    });
+  };
+
+  //fetching hospitals for the map
+  useEffect(() => {
+    const fetchHospitals = async () => {
+      const response = await axios.get("http://localhost:5050/hospitals");
+      setHospitals(response.data);
+    };
+
+    fetchHospitals();
+  }, []);
+
+  //displaying the sevices list
+  useEffect(() => {
+    fetch("http://localhost:5050/hospitals")
+      .then((response) => response.json())
+      .then((hospitals) => {
+        const allServices = hospitals.flatMap((hospital) => hospital.services);
+        const uniqueServices = Array.from(
+          new Set(allServices.map((service) => service.name))
+        ).map((name) => {
+          return allServices.find((service) => service.name === name);
+        });
+        setServices(uniqueServices);
+      })
+      .catch((error) => console.error("Error:", error));
+  }, []);
+
   return (
     <div>
       <Navbar />
@@ -131,26 +236,6 @@ const AdminPanel = () => {
           onSubmit={handleSubmit}
           className="row row-cols-2 row-cols-sm-4 row-cols-md-6  "
         >
-          <div className="mb-3">
-            <label className="form-label">Name:</label>
-            <input
-              type="text"
-              className="form-control"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-            />
-          </div>
-          <div className="mb-3">
-            <label className="form-label">Location:</label>
-            <input
-              type="text"
-              className="form-control"
-              name="location"
-              value={formData.location}
-              onChange={handleChange}
-            />
-          </div>
           <div className="mb-3">
             <label className="form-label">Position:</label>
             <input
@@ -252,8 +337,8 @@ const AdminPanel = () => {
             />
           </div>
 
-          <div className="mb-3 col-12 col-sm-6 col-md-6  ">
-            <label className="form-label">Procedures:</label>
+          <div className="mb-3 col-12 col-sm-6 col-md-6  form-group">
+            {/* <label className="form-label">Procedures:</label>
             <select
               className="form-select"
               value={procedure}
@@ -263,6 +348,20 @@ const AdminPanel = () => {
               <option value="MRI Scan">MRI Scan</option>
               <option value="X-Ray">X-Ray</option>
               <option value="Blood Test">Blood Test</option>
+            </select> */}
+            <label htmlFor="procedure">Procedure</label>
+            <select
+              id="procedure"
+              className="form-control"
+              value={procedure}
+              onChange={handleProcedureChange}
+            >
+              <option value="">Select a service</option>
+              {services.map((service, index) => (
+                <option key={index} value={service.name}>
+                  {service.name}
+                </option>
+              ))}
             </select>
             <input
               type="text"
@@ -285,7 +384,7 @@ const AdminPanel = () => {
                 key={index}
                 className="list-group-item d-flex justify-content-between align-items-center"
               >
-                {procedure.procedure} - Kshs.{procedure.price}
+                {procedure.name} - Kshs.{procedure.price}
                 <button
                   type="button"
                   className="btn btn-danger btn-sm"
@@ -311,15 +410,168 @@ const AdminPanel = () => {
               className="list-group-item d-flex justify-content-between align-items-center"
             >
               {hospital.title} - {hospital.address}
-              <button
-                className="btn btn-danger btn-sm"
-                onClick={() => handleDelete(hospital._id)}
-              >
-                Delete
-              </button>
+              <div>
+                <button
+                  className="btn btn-primary btn-sm ml-2"
+                  onClick={() => handleEdit(hospital)}
+                >
+                  Edit
+                </button>
+                <button
+                  className="btn btn-danger btn-sm"
+                  onClick={() => handleDelete(hospital._id)}
+                >
+                  Delete
+                </button>{" "}
+              </div>
             </li>
           ))}
         </ul>
+        <Modal show={showModal} onHide={handleCloseModal}>
+          <Modal.Header closeButton>
+            <Modal.Title>Edit Hospital</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <Form>
+              <Form.Group controlId="formHospitalTitle">
+                <Form.Label>Title</Form.Label>
+                <Form.Control
+                  type="text"
+                  name="title"
+                  value={currentHospital.title}
+                  onChange={handleInputChange}
+                />
+              </Form.Group>
+
+              <Form.Group controlId="formHospitalLink">
+                <Form.Label>Link</Form.Label>
+                <Form.Control
+                  type="text"
+                  name="link"
+                  value={currentHospital.link}
+                  onChange={handleInputChange}
+                />
+              </Form.Group>
+
+              <Form.Group controlId="formHospitalAddress">
+                <Form.Label>Address</Form.Label>
+                <Form.Control
+                  type="text"
+                  name="address"
+                  value={currentHospital.address}
+                  onChange={handleInputChange}
+                />
+              </Form.Group>
+
+              <Form.Group controlId="formHospitalRating">
+                <Form.Label>Rating</Form.Label>
+                <Form.Control
+                  type="number"
+                  name="rating"
+                  value={currentHospital.rating}
+                  onChange={handleInputChange}
+                />
+              </Form.Group>
+
+              <Form.Group controlId="formHospitalReviews">
+                <Form.Label>Reviews</Form.Label>
+                <Form.Control
+                  type="number"
+                  name="reviews"
+                  value={currentHospital.reviews}
+                  onChange={handleInputChange}
+                />
+              </Form.Group>
+
+              <Form.Group controlId="formHospitalPrice">
+                <Form.Label>Price</Form.Label>
+                <Form.Control
+                  type="number"
+                  name="price"
+                  value={currentHospital.price}
+                  onChange={handleInputChange}
+                />
+              </Form.Group>
+
+              <Form.Group controlId="formHospitalCategory">
+                <Form.Label>Category</Form.Label>
+                <Form.Control
+                  type="text"
+                  name="category"
+                  value={currentHospital.category}
+                  onChange={handleInputChange}
+                />
+              </Form.Group>
+
+              <Form.Group controlId="formHospitalOpeningHours">
+                <Form.Label>Opening Hours</Form.Label>
+                <Form.Control
+                  type="text"
+                  name="opening_hours"
+                  value={currentHospital.opening_hours}
+                  onChange={handleInputChange}
+                />
+              </Form.Group>
+
+              <Form.Group controlId="formHospitalPhone">
+                <Form.Label>Phone</Form.Label>
+                <Form.Control
+                  type="text"
+                  name="phone"
+                  value={currentHospital.phone}
+                  onChange={handleInputChange}
+                />
+              </Form.Group>
+
+              {/* Adding a separate form to handle the services array */}
+              {currentHospital.services.map((service, index) => (
+                <div key={index}>
+                  <Form.Group controlId={`formHospitalServiceName${index}`}>
+                    <Form.Label>Service Name</Form.Label>
+                    <Form.Control
+                      type="text"
+                      name="name"
+                      value={service.name}
+                      onChange={(event) => handleServiceChange(index, event)}
+                    />
+                  </Form.Group>
+
+                  <Form.Group controlId={`formHospitalServicePrice${index}`}>
+                    <Form.Label>Service Price</Form.Label>
+                    <Form.Control
+                      type="number"
+                      name="price"
+                      value={service.price}
+                      onChange={(event) => handleServiceChange(index, event)}
+                    />
+                  </Form.Group>
+
+                  <Button
+                    variant="danger"
+                    onClick={() => handleRemoveService(index)}
+                  >
+                    Remove Service
+                  </Button>
+                </div>
+              ))}
+
+              <Button variant="primary" onClick={handleAddService}>
+                Add Service
+              </Button>
+            </Form>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleCloseModal}>
+              Close
+            </Button>
+            <Button variant="primary" onClick={handleSaveChanges}>
+              Save Changes
+            </Button>
+          </Modal.Footer>
+        </Modal>
+      </div>
+      <div>
+        <Map hospitals={hospitals} />
       </div>
       <Footer />
     </div>

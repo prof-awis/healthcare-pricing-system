@@ -1,0 +1,2802 @@
+[
+  {
+    "_id": {
+      "$oid": "65d6e707492d97d0eef087bc"
+    },
+    "position": 1,
+    "title": "Sinai Hospital - Rongai",
+    "link": "http://www.sinaihospital.co.ke/",
+    "address": "Silver Plaza, Magadi Rd, Ongata Rongai",
+    "rating": 3.1,
+    "reviews": 20,
+    "price": null,
+    "category": "Hospital",
+    "opening_hours": null,
+    "phone": "0759 875100",
+    "__v": 0,
+    "services": [
+      {
+        "name": "Vaccination",
+        "price": 5000
+      },
+      {
+        "name": "General Checkup",
+        "price": 500
+      },
+      {
+        "name": "MRI Scan",
+        "price": 5000
+      },
+      {
+        "name": "X-Ray",
+        "price": 500
+      },
+      {
+        "name": "Blood Test",
+        "price": 5000
+      },
+      {
+        "name": "Ultrasound",
+        "price": 1000
+      },
+      {
+        "name": "Physical Therapy",
+        "price": 1500
+      },
+      {
+        "name": "Dental Cleaning",
+        "price": 800
+      },
+      {
+        "name": "Eye Exam",
+        "price": 500
+      },
+      {
+        "name": "Dermatology Consultation",
+        "price": 1200
+      },
+      {
+        "name": "Psychiatry Consultation",
+        "price": 1500
+      },
+      {
+        "name": "Nutrition Consultation",
+        "price": 1000
+      },
+      {
+        "name": "Flu Shot",
+        "price": 300
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "65d6e707492d97d0eef087bf"
+    },
+    "position": 4,
+    "title": "Fatima Mission Hospital",
+    "link": "https://fatimamission-hospital.business.site/",
+    "address": "JP3V 5RQ , Magadi Road Ongata Rongai Kajiado North Kajiado KE, Magadi Rd, Ongata Rongai",
+    "rating": 3.1,
+    "reviews": 47,
+    "price": null,
+    "category": "Hospital",
+    "opening_hours": null,
+    "phone": "0700 250492",
+    "__v": 0,
+    "services": [
+      {
+        "name": "Vaccination",
+        "price": 5300
+      },
+      {
+        "name": "General Checkup",
+        "price": 540
+      },
+      {
+        "name": "MRI Scan",
+        "price": 5600
+      },
+      {
+        "name": "X-Ray",
+        "price": 400
+      },
+      {
+        "name": "Blood Test",
+        "price": 5900
+      },
+      {
+        "name": "Ultrasound",
+        "price": 1500
+      },
+      {
+        "name": "Physical Therapy",
+        "price": 2500
+      },
+      {
+        "name": "Dental Cleaning",
+        "price": 1000
+      },
+      {
+        "name": "Eye Exam",
+        "price": 520
+      },
+      {
+        "name": "Dermatology Consultation",
+        "price": 2200
+      },
+      {
+        "name": "Psychiatry Consultation",
+        "price": 1700
+      },
+      {
+        "name": "Nutrition Consultation",
+        "price": 1080
+      },
+      {
+        "name": "Flu Shot",
+        "price": 350
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "65d6e707492d97d0eef087c0"
+    },
+    "position": 5,
+    "title": "THE NAIROBI WOMENS HOSPITAL, RONGAI",
+    "link": "https://nwh.co.ke/hospital/",
+    "address": "Magadi Rd,Ongata Rongai, North",
+    "rating": 3.3,
+    "reviews": 69,
+    "price": null,
+    "category": "Hospital",
+    "opening_hours": null,
+    "phone": "0704 135245",
+    "__v": 0,
+    "services": [
+      {
+        "name": "Vaccination",
+        "price": 5200
+      },
+      {
+        "name": "General Checkup",
+        "price": 650
+      },
+      {
+        "name": "MRI Scan",
+        "price": 5050
+      },
+      {
+        "name": "X-Ray",
+        "price": 550
+      },
+      {
+        "name": "Blood Test",
+        "price": 4000
+      },
+      {
+        "name": "Ultrasound",
+        "price": 1500
+      },
+      {
+        "name": "Physical Therapy",
+        "price": 1550
+      },
+      {
+        "name": "Dental Cleaning",
+        "price": 1000
+      },
+      {
+        "name": "Eye Exam",
+        "price": 590
+      },
+      {
+        "name": "Dermatology Consultation",
+        "price": 1900
+      },
+      {
+        "name": "Psychiatry Consultation",
+        "price": 1300
+      },
+      {
+        "name": "Nutrition Consultation",
+        "price": 1500
+      },
+      {
+        "name": "Flu Shot",
+        "price": 200
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "65d6e707492d97d0eef087c1"
+    },
+    "position": 6,
+    "title": "Mount Olive Hospital",
+    "link": "http://www.mountolivehospital.co.ke/",
+    "address": "Ole motondo road, 58 Njambi Road, Ongata Rongai",
+    "rating": 4.4,
+    "reviews": 18,
+    "price": null,
+    "category": "Hospital",
+    "opening_hours": null,
+    "phone": "0701 908595",
+    "__v": 0,
+    "services": [
+      {
+        "name": "Vaccination",
+        "price": 3500
+      },
+      {
+        "name": "General Checkup",
+        "price": 700
+      },
+      {
+        "name": "MRI Scan",
+        "price": 5800
+      },
+      {
+        "name": "X-Ray",
+        "price": 650
+      },
+      {
+        "name": "Blood Test",
+        "price": 5080
+      },
+      {
+        "name": "Ultrasound",
+        "price": 1040
+      },
+      {
+        "name": "Physical Therapy",
+        "price": 1550
+      },
+      {
+        "name": "Dental Cleaning",
+        "price": 880
+      },
+      {
+        "name": "Eye Exam",
+        "price": 555
+      },
+      {
+        "name": "Dermatology Consultation",
+        "price": 1250
+      },
+      {
+        "name": "Psychiatry Consultation",
+        "price": 1550
+      },
+      {
+        "name": "Nutrition Consultation",
+        "price": 1340
+      },
+      {
+        "name": "Flu Shot",
+        "price": 500
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "65d6e707492d97d0eef087bd"
+    },
+    "position": 2,
+    "title": "Fatima Maternity Hospital-Ongata Rongai",
+    "link": "https://www.google.com/maps/dir//Fatima+Maternity+Hospital-Ongata+Rongai,+Ongata+Rongai,+Magadi+Rd,+Machakos/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x182f0543cac72a6d:0xa433170fbcb1c142?sa=X&ved=2ahUKEwjo7f-0pr6EAxWtkokEHWCXCxYQ48ADegQIFRAA&hl=en&gl=ke",
+    "address": "Ongata Rongai, Magadi Rd, Machakos",
+    "rating": 2.8,
+    "reviews": 17,
+    "price": null,
+    "category": "Hospital",
+    "opening_hours": null,
+    "phone": "0714 782845",
+    "__v": 0,
+    "services": [
+      {
+        "name": "Vaccination",
+        "price": 4500
+      },
+      {
+        "name": "General Checkup",
+        "price": 450
+      },
+      {
+        "name": "MRI Scan",
+        "price": 5500
+      },
+      {
+        "name": "X-Ray",
+        "price": 1000
+      },
+      {
+        "name": "Blood Test",
+        "price": 5600
+      },
+      {
+        "name": "Ultrasound",
+        "price": 1300
+      },
+      {
+        "name": "Physical Therapy",
+        "price": 1600
+      },
+      {
+        "name": "Dental Cleaning",
+        "price": 600
+      },
+      {
+        "name": "Eye Exam",
+        "price": 600
+      },
+      {
+        "name": "Dermatology Consultation",
+        "price": 1800
+      },
+      {
+        "name": "Psychiatry Consultation",
+        "price": 1900
+      },
+      {
+        "name": "Nutrition Consultation",
+        "price": 1060
+      },
+      {
+        "name": "Flu Shot",
+        "price": 350
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "65d6e707492d97d0eef087be"
+    },
+    "position": 3,
+    "title": "Wama Hospital",
+    "link": "http://www.wamahospital.org/",
+    "address": "Wama Road, Ongata Rongai",
+    "rating": 3.7,
+    "reviews": 53,
+    "price": null,
+    "category": "Hospital",
+    "opening_hours": null,
+    "phone": "0754 302419",
+    "__v": 0,
+    "services": [
+      {
+        "name": "Vaccination",
+        "price": 4400
+      },
+      {
+        "name": "General Checkup",
+        "price": 670
+      },
+      {
+        "name": "MRI Scan",
+        "price": 4500
+      },
+      {
+        "name": "X-Ray",
+        "price": 800
+      },
+      {
+        "name": "Blood Test",
+        "price": 5770
+      },
+      {
+        "name": "Ultrasound",
+        "price": 1090
+      },
+      {
+        "name": "Physical Therapy",
+        "price": 1550
+      },
+      {
+        "name": "Dental Cleaning",
+        "price": 750
+      },
+      {
+        "name": "Eye Exam",
+        "price": 490
+      },
+      {
+        "name": "Dermatology Consultation",
+        "price": 1200
+      },
+      {
+        "name": "Psychiatry Consultation",
+        "price": 1790
+      },
+      {
+        "name": "Nutrition Consultation",
+        "price": 1080
+      },
+      {
+        "name": "Flu Shot",
+        "price": 399
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "65d6e707492d97d0eef087c4"
+    },
+    "position": 9,
+    "title": "Gertrudes Childrens Hospital-Ongata Rongai Medical Centre",
+    "link": "https://www.gerties.org/medical-centers/rongai-clinic-rongai/https://www.gerties.org/medical-centers/rongai-clinic-rongai/",
+    "address": "Magadi Rd, Ongata Rongai",
+    "rating": 3.7,
+    "reviews": 12,
+    "price": null,
+    "category": "Children's hospital",
+    "opening_hours": null,
+    "phone": "0730 645009",
+    "__v": 0,
+    "services": [
+      {
+        "name": "Vaccination",
+        "price": 6500
+      },
+      {
+        "name": "General Checkup",
+        "price": 560
+      },
+      {
+        "name": "MRI Scan",
+        "price": 5050
+      },
+      {
+        "name": "X-Ray",
+        "price": 590
+      },
+      {
+        "name": "Blood Test",
+        "price": 4500
+      },
+      {
+        "name": "Ultrasound",
+        "price": 1700
+      },
+      {
+        "name": "Physical Therapy",
+        "price": 1800
+      },
+      {
+        "name": "Dental Cleaning",
+        "price": 780
+      },
+      {
+        "name": "Eye Exam",
+        "price": 570
+      },
+      {
+        "name": "Dermatology Consultation",
+        "price": 1299
+      },
+      {
+        "name": "Psychiatry Consultation",
+        "price": 1300
+      },
+      {
+        "name": "Nutrition Consultation",
+        "price": 1200
+      },
+      {
+        "name": "Flu Shot",
+        "price": 400
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "65d6e707492d97d0eef087c5"
+    },
+    "position": 10,
+    "title": "Avenue Healthcare Rongai clinic",
+    "link": "http://www.avenuehealthcare.com/",
+    "address": "2nd Floor, Maasai Mall, Magadi Rd, Ongata Rongai",
+    "rating": 4.6,
+    "reviews": 26,
+    "price": null,
+    "category": "Medical Center",
+    "opening_hours": null,
+    "phone": "0711 060620",
+    "__v": 0,
+    "services": [
+      {
+        "name": "Vaccination",
+        "price": 5200
+      },
+      {
+        "name": "General Checkup",
+        "price": 520
+      },
+      {
+        "name": "MRI Scan",
+        "price": 5050
+      },
+      {
+        "name": "X-Ray",
+        "price": 560
+      },
+      {
+        "name": "Blood Test",
+        "price": 3900
+      },
+      {
+        "name": "Ultrasound",
+        "price": 1570
+      },
+      {
+        "name": "Physical Therapy",
+        "price": 1599
+      },
+      {
+        "name": "Dental Cleaning",
+        "price": 850
+      },
+      {
+        "name": "Eye Exam",
+        "price": 590
+      },
+      {
+        "name": "Dermatology Consultation",
+        "price": 1250
+      },
+      {
+        "name": "Psychiatry Consultation",
+        "price": 1220
+      },
+      {
+        "name": "Nutrition Consultation",
+        "price": 1050
+      },
+      {
+        "name": "Flu Shot",
+        "price": 399
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "65d6e707492d97d0eef087c6"
+    },
+    "position": 11,
+    "title": "Sagatia Medical Center",
+    "link": "https://www.google.com/maps/dir//JQ5C%2BGXQ+Sagatia+Medical+Center,+Magadi+Rd,+Ongata+Rongai/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x182f055ae70889dd:0x9d9ca476769550e1?sa=X&ved=2ahUKEwjo7f-0pr6EAxWtkokEHWCXCxYQ48ADegQICxAA&hl=en&gl=ke",
+    "address": "JQ5C GXQ , Magadi Rd, Ongata Rongai",
+    "rating": 4,
+    "reviews": 3,
+    "price": null,
+    "category": "General hospital",
+    "opening_hours": null,
+    "phone": "0720 570265",
+    "__v": 0,
+    "services": [
+      {
+        "name": "Vaccination",
+        "price": 4500
+      },
+      {
+        "name": "General Checkup",
+        "price": 550
+      },
+      {
+        "name": "MRI Scan",
+        "price": 5500
+      },
+      {
+        "name": "X-Ray",
+        "price": 600
+      },
+      {
+        "name": "Blood Test",
+        "price": 6700
+      },
+      {
+        "name": "Ultrasound",
+        "price": 1900
+      },
+      {
+        "name": "Physical Therapy",
+        "price": 1550
+      },
+      {
+        "name": "Dental Cleaning",
+        "price": 850
+      },
+      {
+        "name": "Eye Exam",
+        "price": 450
+      },
+      {
+        "name": "Dermatology Consultation",
+        "price": 1100
+      },
+      {
+        "name": "Psychiatry Consultation",
+        "price": 1100
+      },
+      {
+        "name": "Nutrition Consultation",
+        "price": 1300
+      },
+      {
+        "name": "Flu Shot",
+        "price": 500
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "65d6e707492d97d0eef087c7"
+    },
+    "position": 12,
+    "title": "BRITISH FAMILY HOSPITAL, OPEN 24/7",
+    "link": "https://www.google.com/maps/dir//BRITISH+FAMILY+HOSPITAL,+OPEN+24%2F7,+Isalu+center,+Magadi+Rd,+Ongata+Rongai/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x182f05ebcf7075b7:0x87ea60b46c9ff78?sa=X&ved=2ahUKEwjo7f-0pr6EAxWtkokEHWCXCxYQ48ADegQIChAA&hl=en&gl=ke",
+    "address": "Isalu center, Magadi Rd, Ongata Rongai",
+    "rating": 3,
+    "reviews": 2,
+    "price": null,
+    "category": "Private hospital",
+    "opening_hours": null,
+    "phone": "0704 478783",
+    "__v": 0,
+    "services": [
+      {
+        "name": "Vaccination",
+        "price": 5010
+      },
+      {
+        "name": "General Checkup",
+        "price": 530
+      },
+      {
+        "name": "MRI Scan",
+        "price": 4500
+      },
+      {
+        "name": "X-Ray",
+        "price": 500
+      },
+      {
+        "name": "Blood Test",
+        "price": 5600
+      },
+      {
+        "name": "Ultrasound",
+        "price": 1400
+      },
+      {
+        "name": "Physical Therapy",
+        "price": 1700
+      },
+      {
+        "name": "Dental Cleaning",
+        "price": 850
+      },
+      {
+        "name": "Eye Exam",
+        "price": 400
+      },
+      {
+        "name": "Dermatology Consultation",
+        "price": 1700
+      },
+      {
+        "name": "Psychiatry Consultation",
+        "price": 1550
+      },
+      {
+        "name": "Nutrition Consultation",
+        "price": 1050
+      },
+      {
+        "name": "Flu Shot",
+        "price": 390
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "65d6e707492d97d0eef087c8"
+    },
+    "position": 13,
+    "title": "Garlands Medical Centre",
+    "link": "https://www.google.com/maps/dir//Garlands+Medical+Centre,+Doctors+Plaza,+Off+Helena+Road,+Ongata+Rongai/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x182f05e8e69a1acd:0x5190422b0276cb3?sa=X&ved=2ahUKEwjo7f-0pr6EAxWtkokEHWCXCxYQ48ADegQICRAA&hl=en&gl=ke",
+    "address": "Doctors Plaza, Off Helena Road, Ongata Rongai",
+    "rating": null,
+    "reviews": null,
+    "price": null,
+    "category": "Private hospital",
+    "opening_hours": null,
+    "phone": "0728 241001",
+    "__v": 0,
+    "services": [
+      {
+        "name": "Vaccination",
+        "price": 4500
+      },
+      {
+        "name": "General Checkup",
+        "price": 600
+      },
+      {
+        "name": "MRI Scan",
+        "price": 5050
+      },
+      {
+        "name": "X-Ray",
+        "price": 1000
+      },
+      {
+        "name": "Blood Test",
+        "price": 5200
+      },
+      {
+        "name": "Ultrasound",
+        "price": 1200
+      },
+      {
+        "name": "Physical Therapy",
+        "price": 1350
+      },
+      {
+        "name": "Dental Cleaning",
+        "price": 750
+      },
+      {
+        "name": "Eye Exam",
+        "price": 500
+      },
+      {
+        "name": "Dermatology Consultation",
+        "price": 1650
+      },
+      {
+        "name": "Psychiatry Consultation",
+        "price": 1650
+      },
+      {
+        "name": "Nutrition Consultation",
+        "price": 1090
+      },
+      {
+        "name": "Flu Shot",
+        "price": 360
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "65d6e707492d97d0eef087c9"
+    },
+    "position": 14,
+    "title": "Wananchi Jamii Maternity & Nursing Home",
+    "link": "http://jamiihospital.co.ke/",
+    "address": "Magadi Road near Kware Bus Stage, Ongata Rongai",
+    "rating": 3.9,
+    "reviews": 31,
+    "price": null,
+    "category": "Hospital",
+    "opening_hours": null,
+    "phone": "0705 978095",
+    "__v": 0,
+    "services": [
+      {
+        "name": "Vaccination",
+        "price": 5799
+      },
+      {
+        "name": "General Checkup",
+        "price": 530
+      },
+      {
+        "name": "MRI Scan",
+        "price": 5990
+      },
+      {
+        "name": "X-Ray",
+        "price": 590
+      },
+      {
+        "name": "Blood Test",
+        "price": 5040
+      },
+      {
+        "name": "Ultrasound",
+        "price": 1040
+      },
+      {
+        "name": "Physical Therapy",
+        "price": 1550
+      },
+      {
+        "name": "Dental Cleaning",
+        "price": 855
+      },
+      {
+        "name": "Eye Exam",
+        "price": 545
+      },
+      {
+        "name": "Dermatology Consultation",
+        "price": 1200
+      },
+      {
+        "name": "Psychiatry Consultation",
+        "price": 1560
+      },
+      {
+        "name": "Nutrition Consultation",
+        "price": 1100
+      },
+      {
+        "name": "Flu Shot",
+        "price": 310
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "65d6e707492d97d0eef087ca"
+    },
+    "position": 15,
+    "title": "Ongata Rongai Health centre",
+    "link": "https://www.google.com/maps/dir//JP4V%2BFM8+Ongata+Rongai+Health+centre,+Ongata+Rongai/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x182f05b7d6ca18db:0xdc1b230b009a7223?sa=X&ved=2ahUKEwjo7f-0pr6EAxWtkokEHWCXCxYQ48ADegQIFBAA&hl=en&gl=ke",
+    "address": "JP4V FM8 , Ongata Rongai",
+    "rating": 3.6,
+    "reviews": 18,
+    "price": null,
+    "category": "Hospital",
+    "opening_hours": null,
+    "phone": null,
+    "__v": 0,
+    "services": [
+      {
+        "name": "Vaccination",
+        "price": 4900
+      },
+      {
+        "name": "General Checkup",
+        "price": 540
+      },
+      {
+        "name": "MRI Scan",
+        "price": 5100
+      },
+      {
+        "name": "X-Ray",
+        "price": 750
+      },
+      {
+        "name": "Blood Test",
+        "price": 4900
+      },
+      {
+        "name": "Ultrasound",
+        "price": 1500
+      },
+      {
+        "name": "Physical Therapy",
+        "price": 1400
+      },
+      {
+        "name": "Dental Cleaning",
+        "price": 850
+      },
+      {
+        "name": "Eye Exam",
+        "price": 590
+      },
+      {
+        "name": "Dermatology Consultation",
+        "price": 1800
+      },
+      {
+        "name": "Psychiatry Consultation",
+        "price": 1400
+      },
+      {
+        "name": "Nutrition Consultation",
+        "price": 1500
+      },
+      {
+        "name": "Flu Shot",
+        "price": 500
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "65d6e707492d97d0eef087cb"
+    },
+    "position": 16,
+    "title": "Ongata Rongai Md Family Medica Care",
+    "link": "https://www.google.com/maps/dir//JP5W%2BXXG+Ongata+Rongai+Md+Family+Medica+Care,+Health+centre,+Ongata+Rongai/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x182f05b7d6ca18db:0xd03cff005cc65820?sa=X&ved=2ahUKEwjo7f-0pr6EAxWtkokEHWCXCxYQ48ADegQIAhAA&hl=en&gl=ke",
+    "address": "JP5W XXG , Health centre, Ongata Rongai",
+    "rating": null,
+    "reviews": null,
+    "price": null,
+    "category": "Hospital",
+    "opening_hours": null,
+    "phone": "0704 754344",
+    "__v": 0,
+    "services": [
+      {
+        "name": "Vaccination",
+        "price": 5700
+      },
+      {
+        "name": "General Checkup",
+        "price": 590
+      },
+      {
+        "name": "MRI Scan",
+        "price": 5050
+      },
+      {
+        "name": "X-Ray",
+        "price": 599
+      },
+      {
+        "name": "Blood Test",
+        "price": 5055
+      },
+      {
+        "name": "Ultrasound",
+        "price": 1300
+      },
+      {
+        "name": "Physical Therapy",
+        "price": 1400
+      },
+      {
+        "name": "Dental Cleaning",
+        "price": 900
+      },
+      {
+        "name": "Eye Exam",
+        "price": 550
+      },
+      {
+        "name": "Dermatology Consultation",
+        "price": 1600
+      },
+      {
+        "name": "Psychiatry Consultation",
+        "price": 1300
+      },
+      {
+        "name": "Nutrition Consultation",
+        "price": 1200
+      },
+      {
+        "name": "Flu Shot",
+        "price": 400
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "65d6e707492d97d0eef087cc"
+    },
+    "position": 17,
+    "title": "Nairobi Women Hospital Ongata Rongai",
+    "link": "https://www.google.com/maps/dir//Nairobi+Women+Hospital+Ongata+Rongai,+Nkaimurunya,+Kajiado+North,+Kajiado+North,+Kajiado/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x182f05b49153689b:0xbcf79a369400b7c?sa=X&ved=2ahUKEwjo7f-0pr6EAxWtkokEHWCXCxYQ48ADegQIAxAA&hl=en&gl=ke",
+    "address": "Nkaimurunya, Kajiado North, Kajiado North, Kajiado",
+    "rating": 5,
+    "reviews": 1,
+    "price": null,
+    "category": "Hospital",
+    "opening_hours": null,
+    "phone": null,
+    "__v": 0,
+    "services": [
+      {
+        "name": "Vaccination",
+        "price": 5600
+      },
+      {
+        "name": "General Checkup",
+        "price": 500
+      },
+      {
+        "name": "MRI Scan",
+        "price": 5100
+      },
+      {
+        "name": "X-Ray",
+        "price": 550
+      },
+      {
+        "name": "Blood Test",
+        "price": 5600
+      },
+      {
+        "name": "Ultrasound",
+        "price": 1100
+      },
+      {
+        "name": "Physical Therapy",
+        "price": 1700
+      },
+      {
+        "name": "Dental Cleaning",
+        "price": 750
+      },
+      {
+        "name": "Eye Exam",
+        "price": 650
+      },
+      {
+        "name": "Dermatology Consultation",
+        "price": 1600
+      },
+      {
+        "name": "Psychiatry Consultation",
+        "price": 1400
+      },
+      {
+        "name": "Nutrition Consultation",
+        "price": 1300
+      },
+      {
+        "name": "Flu Shot",
+        "price": 400
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "65d6e707492d97d0eef087cd"
+    },
+    "position": 18,
+    "title": "Marie Stopes Ongata Rongai",
+    "link": "https://www.google.com/maps/dir//Marie+Stopes+Ongata+Rongai,+Magadi+road+Rescon+house+1st+floor,+Ongata+Rongai/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x182f05bd8da9c9bf:0xb54b57634d6a3c52?sa=X&ved=2ahUKEwjo7f-0pr6EAxWtkokEHWCXCxYQ48ADegQIBRAA&hl=en&gl=ke",
+    "address": "Magadi road Rescon house 1st floor, Ongata Rongai",
+    "rating": 5,
+    "reviews": 1,
+    "price": null,
+    "category": "Hospital",
+    "opening_hours": null,
+    "phone": "0800 720 005",
+    "__v": 0,
+    "services": [
+      {
+        "name": "Vaccination",
+        "price": 5600
+      },
+      {
+        "name": "General Checkup",
+        "price": 700
+      },
+      {
+        "name": "MRI Scan",
+        "price": 5560
+      },
+      {
+        "name": "X-Ray",
+        "price": 599
+      },
+      {
+        "name": "Blood Test",
+        "price": 5070
+      },
+      {
+        "name": "Ultrasound",
+        "price": 1400
+      },
+      {
+        "name": "Physical Therapy",
+        "price": 1200
+      },
+      {
+        "name": "Dental Cleaning",
+        "price": 1000
+      },
+      {
+        "name": "Eye Exam",
+        "price": 590
+      },
+      {
+        "name": "Dermatology Consultation",
+        "price": 1500
+      },
+      {
+        "name": "Psychiatry Consultation",
+        "price": 1900
+      },
+      {
+        "name": "Nutrition Consultation",
+        "price": 1450
+      },
+      {
+        "name": "Flu Shot",
+        "price": 350
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "65d6e707492d97d0eef087ce"
+    },
+    "position": 19,
+    "title": "Ongata Rongai Sub County Hospital",
+    "link": "https://www.google.com/maps/dir//Ongata+Rongai+Sub+County+Hospital,+Nkaimurunya,+Kajiado+North,+Kajiado+North,+Kajiado/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x182f0555c5f95577:0xa6081705f52d231a?sa=X&ved=2ahUKEwjo7f-0pr6EAxWtkokEHWCXCxYQ48ADegQIBBAA&hl=en&gl=ke",
+    "address": "Nkaimurunya, Kajiado North, Kajiado North, Kajiado",
+    "rating": 4.6,
+    "reviews": 7,
+    "price": null,
+    "category": "Hospital",
+    "opening_hours": null,
+    "phone": null,
+    "__v": 0,
+    "services": [
+      {
+        "name": "Vaccination",
+        "price": 3900
+      },
+      {
+        "name": "General Checkup",
+        "price": 599
+      },
+      {
+        "name": "MRI Scan",
+        "price": 5300
+      },
+      {
+        "name": "X-Ray",
+        "price": 900
+      },
+      {
+        "name": "Blood Test",
+        "price": 4400
+      },
+      {
+        "name": "Ultrasound",
+        "price": 1350
+      },
+      {
+        "name": "Physical Therapy",
+        "price": 2500
+      },
+      {
+        "name": "Dental Cleaning",
+        "price": 900
+      },
+      {
+        "name": "Eye Exam",
+        "price": 600
+      },
+      {
+        "name": "Dermatology Consultation",
+        "price": 1700
+      },
+      {
+        "name": "Psychiatry Consultation",
+        "price": 1600
+      },
+      {
+        "name": "Nutrition Consultation",
+        "price": 1400
+      },
+      {
+        "name": "Flu Shot",
+        "price": 350
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "65d6e707492d97d0eef087cf"
+    },
+    "position": 20,
+    "title": "Tabernacle International Hospital",
+    "link": "http://www.tabihospital.com/",
+    "address": "Magadi Rd, Ongata Rongai",
+    "rating": 5,
+    "reviews": 5,
+    "price": null,
+    "category": "Hospital",
+    "opening_hours": null,
+    "phone": "0791 528531",
+    "__v": 0,
+    "services": [
+      {
+        "name": "Vaccination",
+        "price": 5000
+      },
+      {
+        "name": "General Checkup",
+        "price": 560
+      },
+      {
+        "name": "MRI Scan",
+        "price": 5500
+      },
+      {
+        "name": "X-Ray",
+        "price": 600
+      },
+      {
+        "name": "Blood Test",
+        "price": 5800
+      },
+      {
+        "name": "Ultrasound",
+        "price": 1400
+      },
+      {
+        "name": "Physical Therapy",
+        "price": 1200
+      },
+      {
+        "name": "Dental Cleaning",
+        "price": 1000
+      },
+      {
+        "name": "Eye Exam",
+        "price": 550
+      },
+      {
+        "name": "Dermatology Consultation",
+        "price": 1200
+      },
+      {
+        "name": "Psychiatry Consultation",
+        "price": 1400
+      },
+      {
+        "name": "Nutrition Consultation",
+        "price": 900
+      },
+      {
+        "name": "Flu Shot",
+        "price": 400
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "65d6e707492d97d0eef087c2"
+    },
+    "position": 7,
+    "title": "Aga Khan University Hospital Ongata Rongai Medical Centre",
+    "link": "https://hospitals.aku.edu/nairobi/ServicesAndFacilities/Pages/OutpatientMedicalCentres.aspx",
+    "address": "Ongata Mall complex Magadi Rd, Ongata Rongai",
+    "rating": 3.7,
+    "reviews": 6,
+    "price": null,
+    "category": "Medical Center",
+    "opening_hours": null,
+    "phone": "0711 092553",
+    "__v": 0,
+    "services": [
+      {
+        "name": "Vaccination",
+        "price": 4500
+      },
+      {
+        "name": "General Checkup",
+        "price": 500
+      },
+      {
+        "name": "MRI Scan",
+        "price": 5300
+      },
+      {
+        "name": "X-Ray",
+        "price": 580
+      },
+      {
+        "name": "Blood Test",
+        "price": 5200
+      },
+      {
+        "name": "Ultrasound",
+        "price": 1200
+      },
+      {
+        "name": "Physical Therapy",
+        "price": 1300
+      },
+      {
+        "name": "Dental Cleaning",
+        "price": 850
+      },
+      {
+        "name": "Eye Exam",
+        "price": 500
+      },
+      {
+        "name": "Dermatology Consultation",
+        "price": 1500
+      },
+      {
+        "name": "Psychiatry Consultation",
+        "price": 1350
+      },
+      {
+        "name": "Nutrition Consultation",
+        "price": 1050
+      },
+      {
+        "name": "Flu Shot",
+        "price": 500
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "65d6e707492d97d0eef087c3"
+    },
+    "position": 8,
+    "title": "Mariakani Cottage Hospital-Rongai",
+    "link": "https://www.google.com/maps/dir//Mariakani+Cottage+Hospital-Rongai,+Ongata+Rongai,+Magadi+Rd,+Machakos/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x182f05d675c48aa5:0x9fa82c87e0a0064?sa=X&ved=2ahUKEwjo7f-0pr6EAxWtkokEHWCXCxYQ48ADegQIDRAA&hl=en&gl=ke",
+    "address": "Ongata Rongai, Magadi Rd, Machakos",
+    "rating": 3.8,
+    "reviews": 8,
+    "price": null,
+    "category": "Hospital",
+    "opening_hours": null,
+    "phone": null,
+    "__v": 0,
+    "services": [
+      {
+        "name": "Vaccination",
+        "price": 4500
+      },
+      {
+        "name": "General Checkup",
+        "price": 550
+      },
+      {
+        "name": "MRI Scan",
+        "price": 4500
+      },
+      {
+        "name": "X-Ray",
+        "price": 550
+      },
+      {
+        "name": "Blood Test",
+        "price": 5300
+      },
+      {
+        "name": "Ultrasound",
+        "price": 1200
+      },
+      {
+        "name": "Physical Therapy",
+        "price": 1200
+      },
+      {
+        "name": "Dental Cleaning",
+        "price": 950
+      },
+      {
+        "name": "Eye Exam",
+        "price": 650
+      },
+      {
+        "name": "Dermatology Consultation",
+        "price": 1560
+      },
+      {
+        "name": "Psychiatry Consultation",
+        "price": 1550
+      },
+      {
+        "name": "Nutrition Consultation",
+        "price": 1050
+      },
+      {
+        "name": "Flu Shot",
+        "price": 330
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "65d6ecf4df63429fdb03a1b2"
+    },
+    "position": 1,
+    "title": "Equity Afia Medical Centre, Ongata Rongai",
+    "link": "https://www.equityafia.co.ke/",
+    "address": "1st Floor Siron Building, Magadi Rd, Ongata Rongai",
+    "rating": 2.9,
+    "reviews": 14,
+    "price": null,
+    "category": "Medical Center",
+    "opening_hours": null,
+    "phone": "0765 000001",
+    "__v": 0,
+    "services": [
+      {
+        "name": "Vaccination",
+        "price": 5050
+      },
+      {
+        "name": "General Checkup",
+        "price": 599
+      },
+      {
+        "name": "MRI Scan",
+        "price": 5560
+      },
+      {
+        "name": "X-Ray",
+        "price": 599
+      },
+      {
+        "name": "Blood Test",
+        "price": 5050
+      },
+      {
+        "name": "Ultrasound",
+        "price": 1550
+      },
+      {
+        "name": "Physical Therapy",
+        "price": 1450
+      },
+      {
+        "name": "Dental Cleaning",
+        "price": 950
+      },
+      {
+        "name": "Eye Exam",
+        "price": 500
+      },
+      {
+        "name": "Dermatology Consultation",
+        "price": 1450
+      },
+      {
+        "name": "Psychiatry Consultation",
+        "price": 1550
+      },
+      {
+        "name": "Nutrition Consultation",
+        "price": 1400
+      },
+      {
+        "name": "Flu Shot",
+        "price": 499
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "65d6ecf4df63429fdb03a1b5"
+    },
+    "position": 4,
+    "title": "Garlands Medical Centre",
+    "link": "https://www.google.com/maps/dir//Garlands+Medical+Centre,+The+Focus,+Ground+Floor+Magadi+Rd,+Ongata+Rongai/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x182f05cff152f43d:0x8c175a3e2a4071d3?sa=X&ved=2ahUKEwif5sWHrL6EAxWFaUEAHdmTCqA4FBDjwAN6BAgTEAA&hl=en&gl=ke",
+    "address": "The Focus, Ground Floor Magadi Rd, Ongata Rongai",
+    "rating": 4.3,
+    "reviews": 7,
+    "price": null,
+    "category": "Hospital",
+    "opening_hours": null,
+    "phone": "0723 010099",
+    "__v": 0,
+    "services": [
+      {
+        "name": "Vaccination",
+        "price": 5099
+      },
+      {
+        "name": "General Checkup",
+        "price": 600
+      },
+      {
+        "name": "MRI Scan",
+        "price": 5010
+      },
+      {
+        "name": "X-Ray",
+        "price": 610
+      },
+      {
+        "name": "Blood Test",
+        "price": 5600
+      },
+      {
+        "name": "Ultrasound",
+        "price": 1400
+      },
+      {
+        "name": "Physical Therapy",
+        "price": 1520
+      },
+      {
+        "name": "Dental Cleaning",
+        "price": 899
+      },
+      {
+        "name": "Eye Exam",
+        "price": 550
+      },
+      {
+        "name": "Dermatology Consultation",
+        "price": 1250
+      },
+      {
+        "name": "Psychiatry Consultation",
+        "price": 1550
+      },
+      {
+        "name": "Nutrition Consultation",
+        "price": 1300
+      },
+      {
+        "name": "Flu Shot",
+        "price": 350
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "65d6ecf4df63429fdb03a1b6"
+    },
+    "position": 5,
+    "title": "Kisima Health Care",
+    "link": "https://www.google.com/maps/dir//Kisima+Health+Care,+Helena+Road,+Ongata+Rongai/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x182f05030695eaab:0x464e7078af7fccdd?sa=X&ved=2ahUKEwif5sWHrL6EAxWFaUEAHdmTCqA4FBDjwAN6BAgSEAA&hl=en&gl=ke",
+    "address": "Helena Road, Ongata Rongai",
+    "rating": null,
+    "reviews": null,
+    "price": null,
+    "category": "Medical Center",
+    "opening_hours": null,
+    "phone": "0759 367252",
+    "__v": 0,
+    "services": [
+      {
+        "name": "Vaccination",
+        "price": 4400
+      },
+      {
+        "name": "General Checkup",
+        "price": 540
+      },
+      {
+        "name": "MRI Scan",
+        "price": 5200
+      },
+      {
+        "name": "X-Ray",
+        "price": 550
+      },
+      {
+        "name": "Blood Test",
+        "price": 5700
+      },
+      {
+        "name": "Ultrasound",
+        "price": 1000
+      },
+      {
+        "name": "Physical Therapy",
+        "price": 1400
+      },
+      {
+        "name": "Dental Cleaning",
+        "price": 900
+      },
+      {
+        "name": "Eye Exam",
+        "price": 570
+      },
+      {
+        "name": "Dermatology Consultation",
+        "price": 1200
+      },
+      {
+        "name": "Psychiatry Consultation",
+        "price": 1340
+      },
+      {
+        "name": "Nutrition Consultation",
+        "price": 1090
+      },
+      {
+        "name": "Flu Shot",
+        "price": 380
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "65d6ecf4df63429fdb03a1b7"
+    },
+    "position": 6,
+    "title": "Avenue Clinic",
+    "link": "http://www.avenuehealthcare.com/index.php",
+    "address": "JP3X 8G5 , Ongata Rongai",
+    "rating": null,
+    "reviews": null,
+    "price": null,
+    "category": "Hospital",
+    "opening_hours": null,
+    "phone": "0702 154325",
+    "__v": 0,
+    "services": [
+      {
+        "name": "Vaccination",
+        "price": 5650
+      },
+      {
+        "name": "General Checkup",
+        "price": 506
+      },
+      {
+        "name": "MRI Scan",
+        "price": 5050
+      },
+      {
+        "name": "X-Ray",
+        "price": 500
+      },
+      {
+        "name": "Blood Test",
+        "price": 5060
+      },
+      {
+        "name": "Ultrasound",
+        "price": 1300
+      },
+      {
+        "name": "Physical Therapy",
+        "price": 1300
+      },
+      {
+        "name": "Dental Cleaning",
+        "price": 800
+      },
+      {
+        "name": "Eye Exam",
+        "price": 550
+      },
+      {
+        "name": "Dermatology Consultation",
+        "price": 2200
+      },
+      {
+        "name": "Psychiatry Consultation",
+        "price": 2500
+      },
+      {
+        "name": "Nutrition Consultation",
+        "price": 2000
+      },
+      {
+        "name": "Flu Shot",
+        "price": 500
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "65d6ecf4df63429fdb03a1b3"
+    },
+    "position": 2,
+    "title": "Kisima Diagnostic and Treatment Centre",
+    "link": "https://www.google.com/maps/dir//Kisima+Diagnostic+and+Treatment+Centre,+Ongata+Rongai/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x182f053eb73bfab3:0x8dbc34c3342af725?sa=X&ved=2ahUKEwif5sWHrL6EAxWFaUEAHdmTCqA4FBDjwAN6BAgVEAA&hl=en&gl=ke",
+    "address": "Ongata Rongai",
+    "rating": 5,
+    "reviews": 1,
+    "price": null,
+    "category": "Hospital",
+    "opening_hours": null,
+    "phone": "0724 109625",
+    "__v": 0,
+    "services": [
+      {
+        "name": "Vaccination",
+        "price": 5500
+      },
+      {
+        "name": "General Checkup",
+        "price": 560
+      },
+      {
+        "name": "MRI Scan",
+        "price": 5600
+      },
+      {
+        "name": "X-Ray",
+        "price": 580
+      },
+      {
+        "name": "Blood Test",
+        "price": 5500
+      },
+      {
+        "name": "Ultrasound",
+        "price": 1100
+      },
+      {
+        "name": "Physical Therapy",
+        "price": 1100
+      },
+      {
+        "name": "Dental Cleaning",
+        "price": 1000
+      },
+      {
+        "name": "Eye Exam",
+        "price": 1000
+      },
+      {
+        "name": "Dermatology Consultation",
+        "price": 1400
+      },
+      {
+        "name": "Psychiatry Consultation",
+        "price": 1400
+      },
+      {
+        "name": "Nutrition Consultation",
+        "price": 1200
+      },
+      {
+        "name": "Flu Shot",
+        "price": 500
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "65d6ecf4df63429fdb03a1b4"
+    },
+    "position": 3,
+    "title": "Meridian Medical Centre-Rongai",
+    "link": "https://www.google.com/maps/dir//Meridian+Medical+Centre-Rongai,+Ongata+Rongai,+Magadi+Rd,+Machakos/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x182f05c310ce8443:0x7a9f2cc6ade114fd?sa=X&ved=2ahUKEwif5sWHrL6EAxWFaUEAHdmTCqA4FBDjwAN6BAgEEAA&hl=en&gl=ke",
+    "address": "Ongata Rongai, Magadi Rd, Machakos",
+    "rating": null,
+    "reviews": null,
+    "price": null,
+    "category": "Hospital",
+    "opening_hours": null,
+    "phone": "020 2500918",
+    "__v": 0,
+    "services": [
+      {
+        "name": "Vaccination",
+        "price": 5000
+      },
+      {
+        "name": "General Checkup",
+        "price": 1000
+      },
+      {
+        "name": "MRI Scan",
+        "price": 5500
+      },
+      {
+        "name": "X-Ray",
+        "price": 600
+      },
+      {
+        "name": "Blood Test",
+        "price": 4000
+      },
+      {
+        "name": "Ultrasound",
+        "price": 3000
+      },
+      {
+        "name": "Physical Therapy",
+        "price": 2500
+      },
+      {
+        "name": "Dental Cleaning",
+        "price": 900
+      },
+      {
+        "name": "Eye Exam",
+        "price": 900
+      },
+      {
+        "name": "Dermatology Consultation",
+        "price": 2200
+      },
+      {
+        "name": "Psychiatry Consultation",
+        "price": 4500
+      },
+      {
+        "name": "Nutrition Consultation",
+        "price": 1400
+      },
+      {
+        "name": "Flu Shot",
+        "price": 350
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "65d6ecf4df63429fdb03a1ba"
+    },
+    "position": 9,
+    "title": "AAR Healthcare, Rongai Clinic",
+    "link": "http://www.aar-healthcare.com/",
+    "address": "1st Floor, Maiyan Mall, Magadi Rd, Ongata Rongai",
+    "rating": 4.8,
+    "reviews": 4,
+    "price": null,
+    "category": "Medical clinic",
+    "opening_hours": null,
+    "phone": "0734 657172",
+    "__v": 0,
+    "services": [
+      {
+        "name": "Vaccination",
+        "price": 5000
+      },
+      {
+        "name": "General Checkup",
+        "price": 500
+      },
+      {
+        "name": "MRI Scan",
+        "price": 5000
+      },
+      {
+        "name": "X-Ray",
+        "price": 500
+      },
+      {
+        "name": "Blood Test",
+        "price": 5000
+      },
+      {
+        "name": "Ultrasound",
+        "price": 1400
+      },
+      {
+        "name": "Physical Therapy",
+        "price": 1500
+      },
+      {
+        "name": "Dental Cleaning",
+        "price": 800
+      },
+      {
+        "name": "Eye Exam",
+        "price": 500
+      },
+      {
+        "name": "Dermatology Consultation",
+        "price": 1250
+      },
+      {
+        "name": "Psychiatry Consultation",
+        "price": 1550
+      },
+      {
+        "name": "Nutrition Consultation",
+        "price": 1000
+      },
+      {
+        "name": "Flu Shot",
+        "price": 300
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "65d6ecf4df63429fdb03a1bb"
+    },
+    "position": 10,
+    "title": "The Mislandic Medical Centre",
+    "link": "https://www.google.com/maps/dir//JQ5C%2BGXV+The+Mislandic+Medical+Centre,+Ongata+Rongai/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x182f056159e7713d:0xfe24b54e5f8d8790?sa=X&ved=2ahUKEwif5sWHrL6EAxWFaUEAHdmTCqA4FBDjwAN6BAgKEAA&hl=en&gl=ke",
+    "address": "JQ5C GXV , Ongata Rongai",
+    "rating": null,
+    "reviews": null,
+    "price": null,
+    "category": "Hospital",
+    "opening_hours": null,
+    "phone": null,
+    "__v": 0,
+    "services": [
+      {
+        "name": "Vaccination",
+        "price": 5050
+      },
+      {
+        "name": "General Checkup",
+        "price": 560
+      },
+      {
+        "name": "MRI Scan",
+        "price": 5200
+      },
+      {
+        "name": "X-Ray",
+        "price": 700
+      },
+      {
+        "name": "Blood Test",
+        "price": 5600
+      },
+      {
+        "name": "Ultrasound",
+        "price": 1100
+      },
+      {
+        "name": "Physical Therapy",
+        "price": 1200
+      },
+      {
+        "name": "Dental Cleaning",
+        "price": 900
+      },
+      {
+        "name": "Eye Exam",
+        "price": 560
+      },
+      {
+        "name": "Dermatology Consultation",
+        "price": 1200
+      },
+      {
+        "name": "Psychiatry Consultation",
+        "price": 1350
+      },
+      {
+        "name": "Nutrition Consultation",
+        "price": 1100
+      },
+      {
+        "name": "Flu Shot",
+        "price": 440
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "65d6ecf4df63429fdb03a1bc"
+    },
+    "position": 11,
+    "title": "The White Crescent Hospital Rongai",
+    "link": "https://thewhitecrescenthospital.co.ke/",
+    "address": "Rongai Bees-Ness Park, Magadi Rd, Ongata Rongai",
+    "rating": null,
+    "reviews": null,
+    "price": null,
+    "category": "Hospital",
+    "opening_hours": null,
+    "phone": "0769 985175",
+    "__v": 0,
+    "services": [
+      {
+        "name": "Vaccination",
+        "price": 3000
+      },
+      {
+        "name": "General Checkup",
+        "price": 500
+      },
+      {
+        "name": "MRI Scan",
+        "price": 4500
+      },
+      {
+        "name": "X-Ray",
+        "price": 600
+      },
+      {
+        "name": "Blood Test",
+        "price": 5600
+      },
+      {
+        "name": "Ultrasound",
+        "price": 1500
+      },
+      {
+        "name": "Physical Therapy",
+        "price": 1200
+      },
+      {
+        "name": "Dental Cleaning",
+        "price": 100
+      },
+      {
+        "name": "Eye Exam",
+        "price": 2110
+      },
+      {
+        "name": "Dermatology Consultation",
+        "price": 2200
+      },
+      {
+        "name": "Psychiatry Consultation",
+        "price": 1400
+      },
+      {
+        "name": "Nutrition Consultation",
+        "price": 1200
+      },
+      {
+        "name": "Flu Shot",
+        "price": 390
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "65d6ecf4df63429fdb03a1bd"
+    },
+    "position": 12,
+    "title": "Jason's Medical Center",
+    "link": "https://jasons-medical-center.business.site/?utm_source=gmb&utm_medium=referral",
+    "address": "JQ37 R2H , Magadi Rd, Ongata Rongai",
+    "rating": 5,
+    "reviews": 2,
+    "price": null,
+    "category": "Medical Center",
+    "opening_hours": null,
+    "phone": "0702 169233",
+    "__v": 0,
+    "services": [
+      {
+        "name": "Vaccination",
+        "price": 4000
+      },
+      {
+        "name": "General Checkup",
+        "price": 400
+      },
+      {
+        "name": "MRI Scan",
+        "price": 4000
+      },
+      {
+        "name": "X-Ray",
+        "price": 400
+      },
+      {
+        "name": "Blood Test",
+        "price": 4500
+      },
+      {
+        "name": "Ultrasound",
+        "price": 1400
+      },
+      {
+        "name": "Physical Therapy",
+        "price": 1400
+      },
+      {
+        "name": "Dental Cleaning",
+        "price": 840
+      },
+      {
+        "name": "Eye Exam",
+        "price": 540
+      },
+      {
+        "name": "Dermatology Consultation",
+        "price": 1400
+      },
+      {
+        "name": "Psychiatry Consultation",
+        "price": 1400
+      },
+      {
+        "name": "Nutrition Consultation",
+        "price": 1400
+      },
+      {
+        "name": "Flu Shot",
+        "price": 400
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "65d6ecf4df63429fdb03a1be"
+    },
+    "position": 13,
+    "title": "Medanta Africare-Rongai Clinic",
+    "link": "https://www.google.com/maps/dir//Medanta+Africare-Rongai+Clinic,+Ongata+Rongai+Magadi+Rd+Isalu+Center,+North/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x182f058d15a89b29:0xb23cfd419fdad74a?sa=X&ved=2ahUKEwif5sWHrL6EAxWFaUEAHdmTCqA4FBDjwAN6BAgJEAA&hl=en&gl=ke",
+    "address": "Ongata Rongai Magadi Rd Isalu Center, North",
+    "rating": null,
+    "reviews": null,
+    "price": null,
+    "category": "Medical Center",
+    "opening_hours": null,
+    "phone": "0732 109544",
+    "__v": 0,
+    "services": [
+      {
+        "name": "Vaccination",
+        "price": 4300
+      },
+      {
+        "name": "General Checkup",
+        "price": 590
+      },
+      {
+        "name": "MRI Scan",
+        "price": 5900
+      },
+      {
+        "name": "X-Ray",
+        "price": 590
+      },
+      {
+        "name": "Blood Test",
+        "price": 5600
+      },
+      {
+        "name": "Ultrasound",
+        "price": 1400
+      },
+      {
+        "name": "Physical Therapy",
+        "price": 1300
+      },
+      {
+        "name": "Dental Cleaning",
+        "price": 850
+      },
+      {
+        "name": "Eye Exam",
+        "price": 660
+      },
+      {
+        "name": "Dermatology Consultation",
+        "price": 1500
+      },
+      {
+        "name": "Psychiatry Consultation",
+        "price": 1700
+      },
+      {
+        "name": "Nutrition Consultation",
+        "price": 1200
+      },
+      {
+        "name": "Flu Shot",
+        "price": 450
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "65d6ecf4df63429fdb03a1bf"
+    },
+    "position": 14,
+    "title": "SKL Medical center",
+    "link": "https://www.google.com/maps/dir//JQ42%2BFJJ+SKL+Medical+center,+Unnamed+Road,+Ongata+Rongai/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x182f05ab1a3aafdf:0x7299101dcc33369d?sa=X&ved=2ahUKEwif5sWHrL6EAxWFaUEAHdmTCqA4FBDjwAN6BAgIEAA&hl=en&gl=ke",
+    "address": "JQ42 FJJ , Unnamed Road, Ongata Rongai",
+    "rating": null,
+    "reviews": null,
+    "price": null,
+    "category": "Hospital",
+    "opening_hours": null,
+    "phone": null,
+    "__v": 0,
+    "services": [
+      {
+        "name": "Vaccination",
+        "price": 5000
+      },
+      {
+        "name": "General Checkup",
+        "price": 550
+      },
+      {
+        "name": "MRI Scan",
+        "price": 5500
+      },
+      {
+        "name": "X-Ray",
+        "price": 600
+      },
+      {
+        "name": "Blood Test",
+        "price": 5600
+      },
+      {
+        "name": "Ultrasound",
+        "price": 1400
+      },
+      {
+        "name": "Physical Therapy",
+        "price": 1200
+      },
+      {
+        "name": "Dental Cleaning",
+        "price": 809
+      },
+      {
+        "name": "Eye Exam",
+        "price": 650
+      },
+      {
+        "name": "Dermatology Consultation",
+        "price": 1300
+      },
+      {
+        "name": "Psychiatry Consultation",
+        "price": 1300
+      },
+      {
+        "name": "Nutrition Consultation",
+        "price": 1150
+      },
+      {
+        "name": "Flu Shot",
+        "price": 355
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "65d6ecf4df63429fdb03a1c0"
+    },
+    "position": 15,
+    "title": "Gloria Health Services",
+    "link": "https://www.google.com/maps/dir//JP3X%2B6WJ+Gloria+Health+Services,+Magadi+Rd,+Ongata+Rongai/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x182f05c55f00d4f9:0xb64bee6272c61db1?sa=X&ved=2ahUKEwif5sWHrL6EAxWFaUEAHdmTCqA4FBDjwAN6BAgUEAA&hl=en&gl=ke",
+    "address": "JP3X 6WJ , Magadi Rd, Ongata Rongai",
+    "rating": null,
+    "reviews": null,
+    "price": null,
+    "category": "Medical Center",
+    "opening_hours": null,
+    "phone": null,
+    "__v": 0,
+    "services": [
+      {
+        "name": "Vaccination",
+        "price": 5099
+      },
+      {
+        "name": "General Checkup",
+        "price": 550
+      },
+      {
+        "name": "MRI Scan",
+        "price": 4500
+      },
+      {
+        "name": "X-Ray",
+        "price": 440
+      },
+      {
+        "name": "Blood Test",
+        "price": 6500
+      },
+      {
+        "name": "Ultrasound",
+        "price": 2000
+      },
+      {
+        "name": "Physical Therapy",
+        "price": 1800
+      },
+      {
+        "name": "Dental Cleaning",
+        "price": 990
+      },
+      {
+        "name": "Eye Exam",
+        "price": 600
+      },
+      {
+        "name": "Dermatology Consultation",
+        "price": 1700
+      },
+      {
+        "name": "Psychiatry Consultation",
+        "price": 1200
+      },
+      {
+        "name": "Nutrition Consultation",
+        "price": 1100
+      },
+      {
+        "name": "Flu Shot",
+        "price": 400
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "65d6ecf4df63429fdb03a1c1"
+    },
+    "position": 16,
+    "title": "St. Christopher's Dispensary",
+    "link": "https://www.google.com/maps/dir//St.+Christopher%27s+Dispensary,+Next+Turkys+Super+Market,+Chap+Chap,+Magadi+Rd/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x182f05ccff4ab45d:0xc20452c6bd89aed1?sa=X&ved=2ahUKEwif5sWHrL6EAxWFaUEAHdmTCqA4FBDjwAN6BAgCEAA&hl=en&gl=ke",
+    "address": "Next Turkys Super Market, Chap Chap, Magadi Rd",
+    "rating": 3,
+    "reviews": 1,
+    "price": null,
+    "category": "Hospital",
+    "opening_hours": null,
+    "phone": null,
+    "__v": 0,
+    "services": [
+      {
+        "name": "Vaccination",
+        "price": 4900
+      },
+      {
+        "name": "General Checkup",
+        "price": 800
+      },
+      {
+        "name": "MRI Scan",
+        "price": 5600
+      },
+      {
+        "name": "X-Ray",
+        "price": 460
+      },
+      {
+        "name": "Blood Test",
+        "price": 5000
+      },
+      {
+        "name": "Ultrasound",
+        "price": 1200
+      },
+      {
+        "name": "Physical Therapy",
+        "price": 1100
+      },
+      {
+        "name": "Dental Cleaning",
+        "price": 900
+      },
+      {
+        "name": "Eye Exam",
+        "price": 450
+      },
+      {
+        "name": "Dermatology Consultation",
+        "price": 1800
+      },
+      {
+        "name": "Psychiatry Consultation",
+        "price": 1300
+      },
+      {
+        "name": "Nutrition Consultation",
+        "price": 1500
+      },
+      {
+        "name": "Flu Shot",
+        "price": 560
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "65d6ecf4df63429fdb03a1c2"
+    },
+    "position": 17,
+    "title": "Rongai First Medical Clinic",
+    "link": "https://www.google.com/maps/dir//Rongai+First+Medical+Clinic,+Ongata+Rongai,+Kajiado+North,+Kajiado+North/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x182f05e87de0dec1:0xec80dd05aadece0a?sa=X&ved=2ahUKEwif5sWHrL6EAxWFaUEAHdmTCqA4FBDjwAN6BAgBEAA&hl=en&gl=ke",
+    "address": "Ongata Rongai, Kajiado North, Kajiado North",
+    "rating": 4,
+    "reviews": 1,
+    "price": null,
+    "category": "Hospital",
+    "opening_hours": null,
+    "phone": null,
+    "__v": 0,
+    "services": [
+      {
+        "name": "Vaccination",
+        "price": 6500
+      },
+      {
+        "name": "General Checkup",
+        "price": 600
+      },
+      {
+        "name": "MRI Scan",
+        "price": 6500
+      },
+      {
+        "name": "X-Ray",
+        "price": 550
+      },
+      {
+        "name": "Blood Test",
+        "price": 5400
+      },
+      {
+        "name": "Ultrasound",
+        "price": 1120
+      },
+      {
+        "name": "Physical Therapy",
+        "price": 1550
+      },
+      {
+        "name": "Dental Cleaning",
+        "price": 855
+      },
+      {
+        "name": "Eye Exam",
+        "price": 555
+      },
+      {
+        "name": "Dermatology Consultation",
+        "price": 1250
+      },
+      {
+        "name": "Psychiatry Consultation",
+        "price": 1600
+      },
+      {
+        "name": "Nutrition Consultation",
+        "price": 1200
+      },
+      {
+        "name": "Flu Shot",
+        "price": 355
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "65d6ecf4df63429fdb03a1c3"
+    },
+    "position": 18,
+    "title": "Smryna Hospital",
+    "link": "https://www.google.com/maps/dir//HQV8%2BHXM+Smryna+Hospital,+Ongata+Rongai/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x182f0609c0cf754b:0xf2f8d647f6906155?sa=X&ved=2ahUKEwif5sWHrL6EAxWFaUEAHdmTCqA4FBDjwAN6BAgGEAA&hl=en&gl=ke",
+    "address": "HQV8 HXM , Ongata Rongai",
+    "rating": null,
+    "reviews": null,
+    "price": null,
+    "category": "Hospital",
+    "opening_hours": null,
+    "phone": null,
+    "__v": 0,
+    "services": [
+      {
+        "name": "Vaccination",
+        "price": 5090
+      },
+      {
+        "name": "General Checkup",
+        "price": 540
+      },
+      {
+        "name": "MRI Scan",
+        "price": 5300
+      },
+      {
+        "name": "X-Ray",
+        "price": 550
+      },
+      {
+        "name": "Blood Test",
+        "price": 4500
+      },
+      {
+        "name": "Ultrasound",
+        "price": 1100
+      },
+      {
+        "name": "Physical Therapy",
+        "price": 1900
+      },
+      {
+        "name": "Dental Cleaning",
+        "price": 900
+      },
+      {
+        "name": "Eye Exam",
+        "price": 950
+      },
+      {
+        "name": "Dermatology Consultation",
+        "price": 1500
+      },
+      {
+        "name": "Psychiatry Consultation",
+        "price": 1400
+      },
+      {
+        "name": "Nutrition Consultation",
+        "price": 1200
+      },
+      {
+        "name": "Flu Shot",
+        "price": 450
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "65d6ecf4df63429fdb03a1c4"
+    },
+    "position": 19,
+    "title": "Getrudes",
+    "link": "https://www.google.com/maps/dir//JP3V%2BMMW+Getrudes,+Ongata+Rongai/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x182f05cc2abb5825:0xfdb02f74f6b52e92?sa=X&ved=2ahUKEwif5sWHrL6EAxWFaUEAHdmTCqA4FBDjwAN6BAgDEAA&hl=en&gl=ke",
+    "address": "JP3V MMW , Ongata Rongai",
+    "rating": null,
+    "reviews": null,
+    "price": null,
+    "category": "Children's hospital",
+    "opening_hours": null,
+    "phone": null,
+    "__v": 0,
+    "services": [
+      {
+        "name": "Vaccination",
+        "price": 4500
+      },
+      {
+        "name": "General Checkup",
+        "price": 540
+      },
+      {
+        "name": "MRI Scan",
+        "price": 5400
+      },
+      {
+        "name": "X-Ray",
+        "price": 540
+      },
+      {
+        "name": "Blood Test",
+        "price": 5200
+      },
+      {
+        "name": "Ultrasound",
+        "price": 1100
+      },
+      {
+        "name": "Physical Therapy",
+        "price": 1320
+      },
+      {
+        "name": "Dental Cleaning",
+        "price": 700
+      },
+      {
+        "name": "Eye Exam",
+        "price": 700
+      },
+      {
+        "name": "Dermatology Consultation",
+        "price": 1600
+      },
+      {
+        "name": "Psychiatry Consultation",
+        "price": 1600
+      },
+      {
+        "name": "Nutrition Consultation",
+        "price": 1000
+      },
+      {
+        "name": "Flu Shot",
+        "price": 550
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "65d6ecf4df63429fdb03a1c5"
+    },
+    "position": 20,
+    "title": "UB Africa Medical Center",
+    "link": "https://www.google.com/maps/dir//UB+Africa+Medical+Center,+Ongata+Rongai/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x182f0564bf420f45:0x68d38ca0eb89020d?sa=X&ved=2ahUKEwif5sWHrL6EAxWFaUEAHdmTCqA4FBDjwAN6BAgFEAA&hl=en&gl=ke",
+    "address": "Ongata Rongai",
+    "rating": 5,
+    "reviews": 1,
+    "price": null,
+    "category": "Medical Center",
+    "opening_hours": null,
+    "phone": "0780 895638",
+    "__v": 0,
+    "services": [
+      {
+        "name": "Vaccination",
+        "price": 5400
+      },
+      {
+        "name": "General Checkup",
+        "price": 560
+      },
+      {
+        "name": "MRI Scan",
+        "price": 5200
+      },
+      {
+        "name": "X-Ray",
+        "price": 1000
+      },
+      {
+        "name": "Blood Test",
+        "price": 5400
+      },
+      {
+        "name": "Ultrasound",
+        "price": 1400
+      },
+      {
+        "name": "Physical Therapy",
+        "price": 1600
+      },
+      {
+        "name": "Dental Cleaning",
+        "price": 850
+      },
+      {
+        "name": "Eye Exam",
+        "price": 550
+      },
+      {
+        "name": "Dermatology Consultation",
+        "price": 1100
+      },
+      {
+        "name": "Psychiatry Consultation",
+        "price": 1350
+      },
+      {
+        "name": "Nutrition Consultation",
+        "price": 1050
+      },
+      {
+        "name": "Flu Shot",
+        "price": 450
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "65d6ecf4df63429fdb03a1b8"
+    },
+    "position": 7,
+    "title": "shiroma medical clinic",
+    "link": "https://www.google.com/maps/dir//JQ33%2BC6X+shiroma+medical+clinic,+Magadi+Rd,+Ongata+Rongai/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x182f05cfb45b1789:0x50c9112fce6b6cb4?sa=X&ved=2ahUKEwif5sWHrL6EAxWFaUEAHdmTCqA4FBDjwAN6BAgPEAA&hl=en&gl=ke",
+    "address": "JQ33 C6X , Magadi Rd, Ongata Rongai",
+    "rating": null,
+    "reviews": null,
+    "price": null,
+    "category": "Hospital",
+    "opening_hours": null,
+    "phone": "0710 387047",
+    "__v": 0,
+    "services": [
+      {
+        "name": "Vaccination",
+        "price": 5560
+      },
+      {
+        "name": "General Checkup",
+        "price": 900
+      },
+      {
+        "name": "MRI Scan",
+        "price": 5200
+      },
+      {
+        "name": "X-Ray",
+        "price": 3450
+      },
+      {
+        "name": "Blood Test",
+        "price": 5050
+      },
+      {
+        "name": "Ultrasound",
+        "price": 1200
+      },
+      {
+        "name": "Physical Therapy",
+        "price": 1100
+      },
+      {
+        "name": "Dental Cleaning",
+        "price": 1000
+      },
+      {
+        "name": "Eye Exam",
+        "price": 600
+      },
+      {
+        "name": "Dermatology Consultation",
+        "price": 1600
+      },
+      {
+        "name": "Psychiatry Consultation",
+        "price": 1400
+      },
+      {
+        "name": "Nutrition Consultation",
+        "price": 1200
+      },
+      {
+        "name": "Flu Shot",
+        "price": 340
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "65d6ecf4df63429fdb03a1b9"
+    },
+    "position": 8,
+    "title": "Fatima Nursing Home",
+    "link": "https://www.google.com/maps/dir//JP3V%2BMR9+Fatima+Nursing+Home,+Magadi+Rd,+Ongata+Rongai/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x182f05ce7e790337:0xcdea050684fb513a?sa=X&ved=2ahUKEwif5sWHrL6EAxWFaUEAHdmTCqA4FBDjwAN6BAgOEAA&hl=en&gl=ke",
+    "address": "JP3V MR9 , Magadi Rd, Ongata Rongai",
+    "rating": null,
+    "reviews": null,
+    "price": null,
+    "category": "Hospital",
+    "opening_hours": null,
+    "phone": "0786 584222",
+    "__v": 0,
+    "services": [
+      {
+        "name": "Vaccination",
+        "price": 5600
+      },
+      {
+        "name": "General Checkup",
+        "price": 550
+      },
+      {
+        "name": "MRI Scan",
+        "price": 5500
+      },
+      {
+        "name": "X-Ray",
+        "price": 560
+      },
+      {
+        "name": "Blood Test",
+        "price": 5100
+      },
+      {
+        "name": "Ultrasound",
+        "price": 1100
+      },
+      {
+        "name": "Physical Therapy",
+        "price": 1510
+      },
+      {
+        "name": "Dental Cleaning",
+        "price": 1800
+      },
+      {
+        "name": "Eye Exam",
+        "price": 1500
+      },
+      {
+        "name": "Dermatology Consultation",
+        "price": 1400
+      },
+      {
+        "name": "Psychiatry Consultation",
+        "price": 2500
+      },
+      {
+        "name": "Nutrition Consultation",
+        "price": 1110
+      },
+      {
+        "name": "Flu Shot",
+        "price": 499
+      }
+    ]
+  }
+]
