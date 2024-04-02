@@ -1,96 +1,92 @@
 import React, { useState, useEffect } from "react";
+import {
+  Accordion,
+  Card,
+  Button,
+  Form,
+  AccordionButton,
+  AccordionBody,
+  Container,
+  Row,
+  Col,
+} from "react-bootstrap";
+import { AnalAnalyticsBoard, PriceComparisonChart } from "../../components";
 
 const Pricing = () => {
-  const [hospitalData, setHospitalData] = useState([]);
-  const [searchTerm, setSearchTerm] = useState("");
+  const [hospitals, setHospitals] = useState([]);
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
-    const fetchHospitalData = async () => {
-      try {
-        const response = await fetch("http://localhost:5050/hospitals");
-        if (response.ok) {
-          const data = await response.json();
-          setHospitalData(data);
-        } else {
-          console.error("Failed to fetch hospital data");
-        }
-      } catch (error) {
-        console.error("Error:", error);
-      }
-    };
-
-    fetchHospitalData();
+    fetch("http://localhost:5050/hospitals")
+      .then((response) => response.json())
+      .then((data) => setHospitals(data))
+      .catch((error) => console.error(error));
   }, []);
 
-  const handleSearchTermChange = (event) => {
-    setSearchTerm(event.target.value);
+  const [activeKey, setActiveKey] = useState(null);
+
+  const handleSearch = (event) => {
+    setSearch(event.target.value);
   };
 
-  const filterData = () => {
-    return hospitalData.filter((hospital) => {
-      return (
-        hospital?.title?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        hospital?.address?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        hospital?.services?.some((service) =>
-          service?.name?.toLowerCase().includes(searchTerm.toLowerCase())
-        )
-      );
-    });
-  };
-
-  const filteredHospitalData = filterData();
+  const filteredHospitals = hospitals
+    .map((hospital) => ({
+      ...hospital,
+      services: hospital.services.filter((service) =>
+        service.name.toLowerCase().includes(search.toLowerCase())
+      ),
+    }))
+    .filter(
+      (hospital) =>
+        hospital?.title?.toLowerCase().includes(search.toLowerCase()) ||
+        hospital?.address?.toLowerCase().includes(search.toLowerCase()) ||
+        hospital?.services?.length > 0
+    );
 
   return (
-    <div className="container px-5 mt-5" id="pricing">
-      <h2 className="mb-4">Hospital Pricing</h2>
-      <div className="mb-3">
-        <input
-          type="text"
-          className="form-control"
-          placeholder="Search for a hospital, address, or service"
-          value={searchTerm}
-          onChange={handleSearchTermChange}
-        />
-      </div>
-      {filteredHospitalData.map((hospital) => (
-        <div key={hospital._id}>
-          <h4 className="mt-3">{hospital.title}</h4>
-          <p>{hospital.address}</p>
-          <ul className="list-group">
-            {hospital.services.map((service, index) => (
-              <li key={index} className="list-group-item">
-                <div className="accordion" id={`accordion-${index}`}>
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id={`heading-${index}`}>
-                      <button
-                        className="accordion-button"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target={`#collapse-${index}`}
-                        aria-expanded="false"
-                        aria-controls={`collapse-${index}`}
-                      >
-                        {service.name}
-                      </button>
-                    </h2>
-                    <div
-                      id={`collapse-${index}`}
-                      className="accordion-collapse collapse"
-                      aria-labelledby={`heading-${index}`}
-                      data-bs-parent={`#accordion-${index}`}
-                    >
-                      <div className="accordion-body">
-                        Price: ${service.price}
-                      </div>
+    <Container>
+      <Row className="justify-content-md-center">
+        <Col md="auto">
+          <Form.Control
+            type="text"
+            placeholder="Search"
+            value={search}
+            onChange={handleSearch}
+            className="mb-3"
+          />
+          {/* <PriceComparisonChart hospitals={filteredHospitals} /> */}
+          <AnalAnalyticsBoard hospitals={filteredHospitals} />
+          <Accordion activeKey={activeKey}>
+            {filteredHospitals.map((hospital, index) => (
+              <Accordion.Item eventKey={index.toString()} key={index}>
+                <Accordion.Header>
+                  <Button
+                    variant="link"
+                    onClick={() =>
+                      setActiveKey(
+                        activeKey !== index.toString() ? index.toString() : null
+                      )
+                    }
+                  >
+                    <div style={{ textDecoration: "none" }}>
+                      <h5>{hospital.title}</h5>
+                      <p>{hospital.address}</p>
                     </div>
-                  </div>
-                </div>
-              </li>
+                  </Button>
+                </Accordion.Header>
+                <Accordion.Body>
+                  {hospital.services.map((service, serviceIndex) => (
+                    <p key={serviceIndex}>
+                      <strong>{service.name}:</strong> Kshs. {service.price}
+                    </p>
+                  ))}
+                </Accordion.Body>
+              </Accordion.Item>
             ))}
-          </ul>
-        </div>
-      ))}
-    </div>
+          </Accordion>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 

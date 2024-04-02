@@ -155,9 +155,11 @@ const AdminPanel = () => {
   };
 
   const handleSaveChanges = async () => {
+    console.log(accessToken); // Log the accessToken
     try {
       const response = await axios.put(
         `http://localhost:5050/hospitals/${currentHospital._id}`,
+        currentHospital,
         {
           headers: {
             "Content-Type": "application/json", // Example header
@@ -571,7 +573,7 @@ const AdminPanel = () => {
         </Modal>
       </div>
       <div>
-        <Map hospitals={hospitals} />
+        {/* <Map hospitals={hospitals} /> */}
       </div>
       <Footer />
     </div>
