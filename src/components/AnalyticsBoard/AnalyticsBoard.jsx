@@ -46,6 +46,7 @@ const AnalyticsBoard = ({ hospitals }) => {
                 <td>{service.name}</td>
                 {selectedHospitals.map((hospital) => (
                   <td>
+                    Kshs.
                     {hospital.services.find((s) => s.name === service.name)
                       ?.price || "N/A"}
                   </td>
