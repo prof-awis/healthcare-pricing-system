@@ -9,7 +9,6 @@ import Contact from "../Contact/Contact";
 const Dashboard = () => {
   return (
     <>
-      <Navbar />
       <div className="container-fluid mt-5">
         <div className="row">
           <div className="col p-5 text-center ">
@@ -47,11 +46,9 @@ const Dashboard = () => {
         </div>
       </div>
       <About />
-      <Pricing />
       <Services />
       <Contact />
       {/* <Blog /> */}
-      <Footer />
     </>
   );
 };

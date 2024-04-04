@@ -7,3 +7,4 @@ export { default as Contact } from "./Contact/Contact";
 export { default as Pricing } from "./Pricing/Pricing";
 export { default as Services } from "./Services/Services";
 export { default as AdminPanel } from "./AdminPanel/AdminPanel";
+export { default as Hospitals } from "./Hospitals/Hospitals";

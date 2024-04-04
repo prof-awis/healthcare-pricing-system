@@ -1,109 +1,389 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from "react";
+import Autocomplete from "react-google-autocomplete";
+import Paginate from "react-paginate";
+import { Col, Container, Row } from "react-bootstrap";
+import Accordion from "react-bootstrap/Accordion";
+import Card from "react-bootstrap/Card";
 import {
-  MapContainer,
-  TileLayer,
+  GoogleMap,
   Marker,
-  Popup,
-  useMap,
-  useMapEvents,
-} from "react-leaflet";
-import { GeoSearchControl, OpenStreetMapProvider } from "leaflet-geosearch";
-import L from "leaflet";
-import "leaflet-geosearch/dist/geosearch.css";
-import "leaflet.locatecontrol/dist/L.Control.Locate.css";
-import "leaflet-fullscreen/dist/leaflet.fullscreen.css";
-import "leaflet-routing-machine/dist/leaflet-routing-machine.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+  InfoWindow,
+  DirectionsRenderer,
+} from "@react-google-maps/api";
 
-const ChangeView = ({ center, zoom }) => {
-  const map = useMap();
-  map.setView(center, zoom);
-  return null;
-};
+import PlacesAutocomplete, {
+  geocodeByAddress,
+  getLatLng,
+} from "react-places-autocomplete";
 
-const Map = ({ hospitals }) => {
-  const [currentLocation, setCurrentLocation] = useState([0, 0]);
+const Map = ({ onPointSelected }) => {
+  const [value, setValue] = useState(null);
+  const [input, setInput] = useState("");
+  const [hospitals, setHospitals] = useState([]);
+  const [zoom, setZoom] = useState(6);
+  const [center, setCenter] = useState({ lat: -1.2921, lng: 36.8219 });
+  const [directions, setDirections] = useState(null);
+  const [distantHospitals, setDistantHospitals] = useState([]);
 
-  useEffect(() => {
-    navigator.geolocation.getCurrentPosition(function (position) {
-      setCurrentLocation([position.coords.latitude, position.coords.longitude]);
-    });
-  }, []);
+  // const changeValueHandler = async (val) => {
+  //   const addresses = await geocodeByAddress(val);
+  //   const coords = await getLatLng(addresses[0]);
+  //   const response = await fetch(
+  //     `http://localhost:5050/hospitals/search?latitude=${coords.lat}&longitude=${coords.lng}`
+  //   );
+  //   const data = await response.json();
+  //   setHospitals(data);
+  //   // const locationValue = {
+  //   //   lat: val?.geometry?.location?.lat(),
+  //   //   lng: val?.geometry?.location?.lng(),
+  //   //   address: val?.formatted_address,
+  //   // }
+  //   // setValue(locationValue)
 
-  const DraggableMarker = () => {
-    const [position, setPosition] = React.useState(currentLocation);
-    const markerRef = React.useRef(null);
-    const eventHandlers = React.useMemo(
-      () => ({
-        dragend() {
-          const marker = markerRef.current;
-          if (marker != null) {
-            setPosition(marker.getLatLng());
-          }
+  //   // Update the center and zoom level
+  //   setCenter(coords);
+  //   setZoom(18.5); // or any other zoom level you prefer, up to 21
+
+  //   // Filter hospitals that are 1km away or more
+  //   const distantHospitals = hospitals.filter((hospital) => {
+  //     if (hospital.location && hospital.location.coordinates) {
+  //       const hospitalCoords = {
+  //         lat: hospital.location.coordinates[1],
+  //         lng: hospital.location.coordinates[0],
+  //       };
+  //       return calculateDistance(coords, hospitalCoords) >= 1;
+  //     } else {
+  //       return false;
+  //     }
+  //   });
+  //   // Create a DirectionsService object
+  //   const directionsService = new window.google.maps.DirectionsService();
+
+  //   // Calculate directions to each distant hospital
+  //   distantHospitals.forEach((hospital) => {
+  //     directionsService.route(
+  //       {
+  //         origin: coords,
+  //         destination: {
+  //           lat: hospital.location.coordinates[1],
+  //           lng: hospital.location.coordinates[0],
+  //         },
+  //         travelMode: window.google.maps.TravelMode.DRIVING,
+  //       },
+  //       (result, status) => {
+  //         if (status === window.google.maps.DirectionsStatus.OK) {
+  //           setDirections((prevDirections) => [...prevDirections, result]);
+  //         } else {
+  //           console.error(`error fetching directions ${result}`);
+  //         }
+  //       }
+  //     );
+  //   });
+  // };
+  const changeValueHandler = async (val) => {
+    // Get the user's current location
+    navigator.geolocation.getCurrentPosition(async (position) => {
+      const currentLocation = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude,
+      };
+
+      // Update the center and zoom level
+      setCenter(currentLocation);
+      setZoom(18.5); // or any other zoom level you prefer, up to 21
+
+      const addresses = await geocodeByAddress(val);
+      const destination = await getLatLng(addresses[0]);
+
+      // Create a DirectionsService object
+      const directionsService = new window.google.maps.DirectionsService();
+
+      // Calculate directions from the current location to the searched place
+      directionsService.route(
+        {
+          origin: currentLocation,
+          destination: destination,
+          travelMode: window.google.maps.TravelMode.DRIVING,
         },
-      }),
-      []
-    );
+        (result, status) => {
+          if (status === window.google.maps.DirectionsStatus.OK) {
+            setDirections([result]);
+          } else {
+            console.error(`error fetching directions ${result}`);
+          }
+        }
+      );
 
-    return (
-      <Marker
-        draggable={true}
-        eventHandlers={eventHandlers}
-        position={position}
-        ref={markerRef}
-      >
-        <Popup minWidth={90}>
-          <span>You are here</span>
-        </Popup>
-      </Marker>
+      // Fetch the nearest hospitals within a 10km radius
+      const response = await fetch(
+        `http://localhost:5050/hospitals/search?latitude=${currentLocation.lat}&longitude=${currentLocation.lng}&radius=10000`
+      );
+      const data = await response.json();
+      setDistantHospitals(data);
+    });
+  };
+
+  const searchHandler = async () => {
+    const response = await fetch(
+      `http://localhost:5050/hospitals/search?latitude=${value.lat}&longitude=${value.lng}`
     );
+    const data = await response.json();
+    console.log(data);
+  };
+
+  // Define the number of hospitals per page
+  const HOSPITALS_PER_PAGE = 5;
+  const PER_PAGE = 5;
+
+  // Create a state variable for the current page
+  const [currentPage, setCurrentPage] = useState(1);
+
+  // Calculate the index of the first and last hospital on the current page
+  const indexOfLastHospital = currentPage * HOSPITALS_PER_PAGE;
+  const indexOfFirstHospital = indexOfLastHospital - HOSPITALS_PER_PAGE;
+
+  // Get the hospitals on the current page
+  const currentHospitals = distantHospitals.slice(
+    indexOfFirstHospital,
+    indexOfLastHospital
+  );
+
+  // Create a function to handle page changes
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
+  const offset = currentPage * PER_PAGE;
+
+  // Sort hospitals by distance
+  const sortedHospitals = [...hospitals].sort(
+    (a, b) => a.distance - b.distance
+  );
+
+  const currentPageData = sortedHospitals
+    .slice(offset, offset + PER_PAGE)
+    .map((hospital, hospitalIndex) => (
+      <div key={hospital._id}>
+        <h2>{hospital.title}</h2>
+        <p>{hospital.address}</p>
+        <p>{hospital.distance} Kms away</p>
+        {/* <Accordion>
+          {hospital.services.map((service, serviceIndex) => (
+            <Card key={`${hospital._id}-${serviceIndex}`}>
+              {" "}
+              {/* Unique key using hospital id and service index 
+              <Accordion.Toggle as={Card.Header} eventKey={`${serviceIndex}`}>
+                {service.name}
+              </Accordion.Toggle>
+              <Accordion.Collapse eventKey={`${serviceIndex}`}>
+                <Card.Body>{service.description}</Card.Body>
+              </Accordion.Collapse>
+            </Card>
+          ))}
+        </Accordion> */}
+      </div>
+    ));
+
+  const pageCount = Math.ceil(hospitals.length / PER_PAGE);
+
+  const handlePageClick = ({ selected }) => setCurrentPage(selected);
+
+  const nextPage = () => setCurrentPage((prevPageNumber) => prevPageNumber + 1);
+  const prevPage = () => setCurrentPage((prevPageNumber) => prevPageNumber - 1);
+
+  const onMapClick = (event) => {
+    setCenter({ lat: event.latLng.lat(), lng: event.latLng.lng() });
+    setZoom(18); // or any other zoom level you prefer
   };
 
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col">
-          <MapContainer
-            center={currentLocation}
-            zoom={13}
-            style={{ height: "300px", width: "100%" }}
-            whenCreated={(mapInstance) => {
-              const searchControl = new GeoSearchControl({
-                provider: new OpenStreetMapProvider(),
-                showMarker: true,
-                retainZoomLevel: true,
-              });
-              mapInstance.addControl(searchControl);
-              L.control.locate().addTo(mapInstance);
-              L.control.scale().addTo(mapInstance);
-              L.control.fullscreen().addTo(mapInstance);
+    <Container className="container-fluid ">
+      <Row className="py-3 vw-100">
+        <Col className="col-12 col-md-6 ">
+          <PlacesAutocomplete
+            value={input}
+            onChange={(e) => {
+              setInput(e);
+            }}
+            onSelect={(val) => {
+              changeValueHandler(val);
+            }}
+            searchOptions={{
+              // types: ["(cities)"],
+              componentRestrictions: { country: "ke" },
             }}
           >
-            <TileLayer
-              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-              attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-            />
-            <DraggableMarker />
-            {hospitals.map((hospital) =>
+            {({
+              getInputProps,
+              suggestions,
+              getSuggestionItemProps,
+              loading,
+            }) => (
+              <div className="">
+                <div className="d-flex">
+                  <input
+                    {...getInputProps({
+                      placeholder: "Search Places ...",
+                      className:
+                        "location-search-input form-control shadow-none w-100 p-2",
+                    })}
+                  />
+                  <button className="btn btn-primary" onClick={searchHandler}>
+                    Search
+                  </button>
+                </div>
+                <div className="autocomplete-dropdown-container">
+                  {loading && <div>Loading...</div>}
+                  {suggestions.map((suggestion) => {
+                    const className = suggestion.active
+                      ? "suggestion-item--active"
+                      : "suggestion-item";
+                    // inline style for demonstration purpose
+                    const style = suggestion.active
+                      ? { backgroundColor: "#fafafa", cursor: "pointer" }
+                      : { backgroundColor: "#ffffff", cursor: "pointer" };
+                    return (
+                      <div
+                        {...getSuggestionItemProps(suggestion, {
+                          className,
+                          style,
+                        })}
+                      >
+                        <span>{suggestion.description}</span>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
+          </PlacesAutocomplete>
+
+          {currentHospitals.map((hospital, index) => (
+            <div key={index}>
+              <div className="accordion p-2 " id={`accordionExample${index}`}>
+                <div className="accordion-item ">
+                  <div
+                    className="accordion-header text-center "
+                    id={`heading${index}`}
+                  >
+                    <button
+                      className="accordion-button btn  btn-block w-100 shadow-none d-flex flex-column "
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target={`#collapse${index}`}
+                      aria-expanded="true"
+                      aria-controls={`collapse${index}`}
+                    >
+                      <h2>{hospital.title}</h2>
+                      <p>{hospital.address}</p>
+                      <p>
+                        {hospital.distance.toFixed(2)} km away from your
+                        location
+                      </p>
+                    </button>
+                  </div>
+
+                  <div
+                    id={`collapse${index}`}
+                    className="accordion-collapse collapse show"
+                    aria-labelledby={`heading${index}`}
+                    data-bs-parent={`#accordionExample${index}`}
+                  >
+                    <div className="card-body">
+                      <p>Services:</p>
+                      {hospital.services.map((service, serviceIndex) => (
+                        <div key={serviceIndex}>
+                          <p>
+                            {service.name}: Kshs. {service.price}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+
+          <Paginate
+            previousLabel={"← Previous"}
+            nextLabel={"Next →"}
+            pageCount={pageCount}
+            onPageChange={handlePageClick}
+            containerClassName={"pagination"}
+            previousLinkClassName={"page-link shadow-none"}
+            nextLinkClassName={"page-link shadow-none"}
+            pageClassName={"page-item"} // add this line
+            pageLinkClassName={"page-link"} // add this line
+            activeClassName={"active"}
+            breakLabel={"..."}
+            marginPagesDisplayed={2}
+            pageRangeDisplayed={5}
+          />
+          {/* Custom Pagination */}
+          <div>
+            <button
+              disabled={currentPage === 1}
+              onClick={() => handlePageChange(currentPage - 1)}
+            >
+              ← Previous
+            </button>
+            {Array(pageCount)
+              .fill()
+              .map((_, index) => (
+                <button key={index} onClick={() => handlePageChange(index + 1)}>
+                  {index + 1}
+                </button>
+              ))}
+            <button
+              disabled={currentPage === pageCount}
+              onClick={() => handlePageChange(currentPage + 1)}
+            >
+              Next →
+            </button>
+            <p>
+              Page {currentPage} of {pageCount}
+            </p>
+          </div>
+        </Col>
+        <Col className="px-3 col-12 col-md-6 ">
+          <GoogleMap
+            mapContainerStyle={{ width: "100%", height: "400px" }}
+            center={center}
+            zoom={zoom} // zoom level that shows the whole of Kenya
+            onClick={onMapClick}
+            onLoad={(map) => {
+              const bounds = new window.google.maps.LatLngBounds(
+                new window.google.maps.LatLng(-4.6796, 33.9099),
+                new window.google.maps.LatLng(5.033, 41.8991)
+              );
+              map.setOptions({
+                restriction: {
+                  latLngBounds: bounds,
+                  strictBounds: true,
+                },
+              });
+            }}
+          >
+            {directions &&
+              directions.map((direction, index) => (
+                <DirectionsRenderer key={index} directions={direction} />
+              ))}
+            {currentPageData.map((hospital) =>
               hospital.location && hospital.location.coordinates ? (
                 <Marker
-                  key={hospital._id}
-                  position={[
-                    hospital.location.coordinates[1],
-                    hospital.location.coordinates[0],
-                  ]}
-                >
-                  <Popup>
-                    <h2>{hospital.name}</h2>
-                    <p>{hospital.address}</p>
-                  </Popup>
-                </Marker>
+                  key={hospital.id} // using hospital id as key
+                  position={{
+                    lat: hospital.location.coordinates[1],
+                    lng: hospital.location.coordinates[0],
+                  }}
+                />
               ) : null
             )}
-          </MapContainer>
-        </div>
-      </div>
-    </div>
+          </GoogleMap>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 

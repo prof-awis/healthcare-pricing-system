@@ -1,7 +1,16 @@
 import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
 import "./App.css";
-import { About, AdminPanel, Blog, Dashboard, Login, SignUp } from "./pages";
-import { BlogList, BlogPost } from "./components";
+import {
+  About,
+  AdminPanel,
+  Blog,
+  Dashboard,
+  Hospitals,
+  Login,
+  Pricing,
+  SignUp,
+} from "./pages";
+import { BlogList, BlogPost, Footer, Navbar } from "./components";
 
 function App() {
   const blogPosts = [
@@ -24,6 +33,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Dashboard />} />
         <Route path="/SignUp" element={<SignUp />} />
@@ -34,8 +44,11 @@ function App() {
           path="/Blog/:postId"
           element={<BlogPost blogPosts={blogPosts} />}
         />
-        <Route path="/AdminPanel" element={<AdminPanel/>}/>
+        <Route path="/AdminPanel" element={<AdminPanel />} />
+        <Route path="/Pricing" element={<Pricing />} />
+        <Route path="/Hospitals" element={<Hospitals />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }

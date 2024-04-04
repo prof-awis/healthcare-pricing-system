@@ -11,7 +11,11 @@ import {
   Col,
   Pagination,
 } from "react-bootstrap";
-import { AnalAnalyticsBoard, PriceComparisonChart } from "../../components";
+import {
+  AnalAnalyticsBoard,
+  Map,
+  PriceComparisonChart,
+} from "../../components";
 
 function getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) {
   const R = 6371; // Radius of the earth in km
@@ -44,10 +48,10 @@ const Pricing = () => {
       .then((data) => {
         const hospitalsWithDistance = data.map((hospital) => {
           const distance = getDistanceFromLatLonInKm(
-            location.coordinates[0],
-            location.coordinates[1],
-            hospital.location.coordinates[0],
-            hospital.location.coordinates[1]
+            location?.coordinates[0],
+            location?.coordinates[1],
+            hospital?.location.coordinates[0],
+            hospital?.location.coordinates[1]
           );
           return { ...hospital, distance };
         });
@@ -88,7 +92,7 @@ const Pricing = () => {
         hospital.address.toLowerCase().includes(search.toLowerCase()) ||
         hospital.services.length > 0
     );
-    
+
   const indexOfLastHospital = currentPage * hospitalsPerPage;
   const indexOfFirstHospital = indexOfLastHospital - hospitalsPerPage;
   const currentHospitals = filteredHospitals.slice(
@@ -100,7 +104,7 @@ const Pricing = () => {
 
   return (
     <Container>
-      <Row className="justify-content-md-center py-3 ">
+      <Row>
         <Col md="8">
           <Form.Control
             type="text"
