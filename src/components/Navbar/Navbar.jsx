@@ -17,7 +17,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="navbar navbar-expand-lg bg-info px-md-5 sticky-top mb-5 ">
+    <nav className="navbar navbar-expand-lg bg-info px-md-5 sticky-top ">
       <div className="container-fluid">
         <Link className="navbar-brand fw-bold " to="/">
           MediPrice
@@ -57,7 +57,7 @@ const Navbar = () => {
               </li>
             )}
             <li className="nav-item">
-              <Link className="nav-link" to="#about">
+              <Link className="nav-link" to="/About">
                 About
               </Link>
             </li>
@@ -72,7 +72,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="#contact">
+              <Link className="nav-link" to="/Contact">
                 Contact
               </Link>
             </li>

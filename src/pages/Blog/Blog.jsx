@@ -23,7 +23,6 @@ const Blog = () => {
       content:
         "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     },
-    // Add more blog posts as needed
   ];
 
   return (

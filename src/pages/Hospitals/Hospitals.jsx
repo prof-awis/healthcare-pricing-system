@@ -9,8 +9,8 @@ const Hospitals = () => {
   return (
     <Container>
       <Row>
-        <Col md="8">
-          <h1>Hospitals Near You</h1>
+        <h1 className="text-center py-4">Hospitals Near You</h1>
+        <Col md="8" className="justify-content-center align-items-center ">
           <Map onPointSelected={handlePointSelected} />
         </Col>{" "}
       </Row>

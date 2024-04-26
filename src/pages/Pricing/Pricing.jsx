@@ -104,11 +104,12 @@ const Pricing = () => {
 
   return (
     <Container>
-      <Row>
+      <Row className="justify-content-center align-items-center ">
+        <h1 className="text-center py-4 ">Hospitals Profiles</h1>
         <Col md="8">
           <Form.Control
             type="text"
-            placeholder="Search"
+            placeholder="Search by hospital name, address, or service name"
             value={search}
             onChange={handleSearch}
             className="mb-3 shadow-none "
@@ -116,7 +117,7 @@ const Pricing = () => {
           <Accordion activeKey={activeKey}>
             {currentHospitals.map((hospital, index) => (
               <Accordion.Item eventKey={index.toString()} key={index}>
-                <Accordion.Header className="d-flex justify-content-center">
+                <Accordion.Header className="d-flex justify-content-center ">
                   <Button
                     variant="link"
                     onClick={() =>
@@ -124,12 +125,14 @@ const Pricing = () => {
                         activeKey !== index.toString() ? index.toString() : null
                       )
                     }
-                    className="w-100 shadow-none decoration-none"
+                    className="w-100 shadow-none text-decoration-none"
                   >
-                    <div style={{ textDecoration: "none" }}>
-                      <h5>{hospital.title}</h5>
+                    <div className="text-decoration-none  ">
+                      <h5 className="text-decoration-none ">
+                        {hospital.title}
+                      </h5>
                       <p>{hospital.address}</p>
-                      <p>{hospital.distance} Kms Away</p>
+                      <p className="fst-italic "> Click to see more</p>
                     </div>
                   </Button>
                 </Accordion.Header>
@@ -169,7 +172,7 @@ const Pricing = () => {
           </div>
         </Col>
       </Row>
-      <Row className="justify-content-md-center py-2 ">
+      <Row className="justify-content-md-center py-4 ">
         <Col md="8">
           {/* <PriceComparisonChart hospitals={filteredHospitals} /> */}
           <AnalAnalyticsBoard hospitals={filteredHospitals} />

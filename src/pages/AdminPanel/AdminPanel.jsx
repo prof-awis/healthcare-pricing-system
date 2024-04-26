@@ -231,7 +231,6 @@ const AdminPanel = () => {
 
   return (
     <div>
-      <Navbar />
       <div className="container mt-5">
         <h2>Add Hospital</h2>
         <form
@@ -572,10 +571,7 @@ const AdminPanel = () => {
           </Modal.Footer>
         </Modal>
       </div>
-      <div>
-        {/* <Map hospitals={hospitals} /> */}
-      </div>
-      <Footer />
+      <div>{/* <Map hospitals={hospitals} /> */}</div>
     </div>
   );
 };

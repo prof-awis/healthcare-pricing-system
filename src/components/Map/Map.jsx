@@ -25,61 +25,6 @@ const Map = ({ onPointSelected }) => {
   const [directions, setDirections] = useState(null);
   const [distantHospitals, setDistantHospitals] = useState([]);
 
-  // const changeValueHandler = async (val) => {
-  //   const addresses = await geocodeByAddress(val);
-  //   const coords = await getLatLng(addresses[0]);
-  //   const response = await fetch(
-  //     `http://localhost:5050/hospitals/search?latitude=${coords.lat}&longitude=${coords.lng}`
-  //   );
-  //   const data = await response.json();
-  //   setHospitals(data);
-  //   // const locationValue = {
-  //   //   lat: val?.geometry?.location?.lat(),
-  //   //   lng: val?.geometry?.location?.lng(),
-  //   //   address: val?.formatted_address,
-  //   // }
-  //   // setValue(locationValue)
-
-  //   // Update the center and zoom level
-  //   setCenter(coords);
-  //   setZoom(18.5); // or any other zoom level you prefer, up to 21
-
-  //   // Filter hospitals that are 1km away or more
-  //   const distantHospitals = hospitals.filter((hospital) => {
-  //     if (hospital.location && hospital.location.coordinates) {
-  //       const hospitalCoords = {
-  //         lat: hospital.location.coordinates[1],
-  //         lng: hospital.location.coordinates[0],
-  //       };
-  //       return calculateDistance(coords, hospitalCoords) >= 1;
-  //     } else {
-  //       return false;
-  //     }
-  //   });
-  //   // Create a DirectionsService object
-  //   const directionsService = new window.google.maps.DirectionsService();
-
-  //   // Calculate directions to each distant hospital
-  //   distantHospitals.forEach((hospital) => {
-  //     directionsService.route(
-  //       {
-  //         origin: coords,
-  //         destination: {
-  //           lat: hospital.location.coordinates[1],
-  //           lng: hospital.location.coordinates[0],
-  //         },
-  //         travelMode: window.google.maps.TravelMode.DRIVING,
-  //       },
-  //       (result, status) => {
-  //         if (status === window.google.maps.DirectionsStatus.OK) {
-  //           setDirections((prevDirections) => [...prevDirections, result]);
-  //         } else {
-  //           console.error(`error fetching directions ${result}`);
-  //         }
-  //       }
-  //     );
-  //   });
-  // };
   const changeValueHandler = async (val) => {
     // Get the user's current location
     navigator.geolocation.getCurrentPosition(async (position) => {
@@ -167,20 +112,6 @@ const Map = ({ onPointSelected }) => {
         <h2>{hospital.title}</h2>
         <p>{hospital.address}</p>
         <p>{hospital.distance} Kms away</p>
-        {/* <Accordion>
-          {hospital.services.map((service, serviceIndex) => (
-            <Card key={`${hospital._id}-${serviceIndex}`}>
-              {" "}
-              {/* Unique key using hospital id and service index 
-              <Accordion.Toggle as={Card.Header} eventKey={`${serviceIndex}`}>
-                {service.name}
-              </Accordion.Toggle>
-              <Accordion.Collapse eventKey={`${serviceIndex}`}>
-                <Card.Body>{service.description}</Card.Body>
-              </Accordion.Collapse>
-            </Card>
-          ))}
-        </Accordion> */}
       </div>
     ));
 
@@ -198,8 +129,8 @@ const Map = ({ onPointSelected }) => {
 
   return (
     <Container className="container-fluid ">
-      <Row className="py-3 vw-100">
-        <Col className="col-12 col-md-6 ">
+      <Row className="py-3 min-vw-100  ">
+        <Col className="col-sm-12 col-md-6 justify-content-center align-align-items-center ">
           <PlacesAutocomplete
             value={input}
             onChange={(e) => {
@@ -219,8 +150,8 @@ const Map = ({ onPointSelected }) => {
               getSuggestionItemProps,
               loading,
             }) => (
-              <div className="">
-                <div className="d-flex">
+              <div className="py-1 px-5">
+                <div className="d-flex px-sm-2  px-md-5 ">
                   <input
                     {...getInputProps({
                       placeholder: "Search Places ...",
@@ -259,7 +190,7 @@ const Map = ({ onPointSelected }) => {
           </PlacesAutocomplete>
 
           {currentHospitals.map((hospital, index) => (
-            <div key={index}>
+            <div key={index} className="px-5">
               <div className="accordion p-2 " id={`accordionExample${index}`}>
                 <div className="accordion-item ">
                   <div
@@ -347,6 +278,10 @@ const Map = ({ onPointSelected }) => {
           </div>
         </Col>
         <Col className="px-3 col-12 col-md-6 ">
+          <h6 className="text-center text-info fst-italic py-4 ">
+            {" "}
+            See Directions
+          </h6>
           <GoogleMap
             mapContainerStyle={{ width: "100%", height: "400px" }}
             center={center}

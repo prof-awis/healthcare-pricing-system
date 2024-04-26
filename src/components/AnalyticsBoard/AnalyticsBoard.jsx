@@ -14,7 +14,7 @@ const AnalyticsBoard = ({ hospitals }) => {
 
   return (
     <>
-      <h1>Compare Prices for Services in Different Hospitals</h1>
+      <h1 className="text-center py-4">Compare Prices for Services in Different Hospitals</h1>
       <Row>
         {[0, 1].map((index) => (
           <Col key={index}>

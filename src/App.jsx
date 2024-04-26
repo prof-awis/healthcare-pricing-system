@@ -9,10 +9,13 @@ import {
   Login,
   Pricing,
   SignUp,
+  Contact,
 } from "./pages";
 import { BlogList, BlogPost, Footer, Navbar } from "./components";
 
 function App() {
+  // const API_KEY = `${process.env.REACT_APP_API_KEY_MAP}`;
+  // console.log(API_KEY);
   const blogPosts = [
     {
       id: 1,
@@ -47,6 +50,8 @@ function App() {
         <Route path="/AdminPanel" element={<AdminPanel />} />
         <Route path="/Pricing" element={<Pricing />} />
         <Route path="/Hospitals" element={<Hospitals />} />
+        <Route path="/Contact" element={<Contact />} />
+        <Route path="/About" element={<About />} />
       </Routes>
       <Footer />
     </BrowserRouter>
